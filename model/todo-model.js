@@ -5,7 +5,7 @@ const todoDB = new Datastore({
     autoload: true,
 });
 
-const readTodos = async () => {
+const findTodos = async () => {
     const doc = await todoDB.find({});
     return doc;
 }
@@ -17,3 +17,8 @@ const createTodo = async (title, done) => {
 // const updateTodo = async (todoId, title, done) => {
 //     const doc = await todoDB.update({_id: todoId, })
 // }
+
+module.exports = {
+    findTodos,
+    createTodo
+}
