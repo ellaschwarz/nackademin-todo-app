@@ -1,7 +1,7 @@
 
 const {
     findTodos,
-    createTodo
+    insertTodo
 } = require('../model/todo-model');
 
 const readTodos = async (req, res) => {
@@ -13,6 +13,17 @@ const readTodos = async (req, res) => {
     }
 };
 
+const createTodo = async (req, res) => {
+    const {title, done} = req.body;
+    try {
+        const todo = await insertTodo(title, done);
+        res.status(200).send(todo);
+    } catch (err) {
+        res.status(202).send(err);
+    }
+};
+
 module.exports = {
-    readTodos
+    readTodos,
+    createTodo
 };

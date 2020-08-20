@@ -10,8 +10,9 @@ const findTodos = async () => {
     return doc;
 }
 
-const createTodo = async (title, done) => {
-    const doc = await todoDB.insert({title, done});
+const insertTodo = async (title, done) => {
+    const doc = await todoDB.insert({title, done, timestamp: new Date().toLocaleString()});
+    return doc;
 };
 
 // const updateTodo = async (todoId, title, done) => {
@@ -20,5 +21,5 @@ const createTodo = async (title, done) => {
 
 module.exports = {
     findTodos,
-    createTodo
+    insertTodo
 }

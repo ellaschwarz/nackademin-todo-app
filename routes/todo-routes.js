@@ -5,7 +5,7 @@ const router = new Router();
 const Todo = require('../controllers/todo-controller');
 
 //Creating todos
-// router.post('/', xxx);
+router.post('/', Todo.createTodo);
 
 //Reading todos
 router.get('/', Todo.readTodos);
