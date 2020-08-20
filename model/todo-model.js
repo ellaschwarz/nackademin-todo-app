@@ -11,15 +11,22 @@ const findTodos = async () => {
 }
 
 const insertTodo = async (title, done) => {
-    const doc = await todoDB.insert({title, done, timestamp: new Date().toLocaleString()});
+    const doc = await todoDB.insert({
+        title, 
+        done, 
+        timestamp: new Date().toLocaleString()});
     return doc;
 };
 
-// const updateTodo = async (todoId, title, done) => {
-//     const doc = await todoDB.update({_id: todoId, })
-// }
+const updateTodo = async (todoId, title, done) => {
+    const doc = await todoDB.update(
+        {_id: todoId}, 
+        {title, done, timestamp: new Date().toLocaleString()}, {})
+        return doc;
+};
 
 module.exports = {
     findTodos,
-    insertTodo
+    insertTodo,
+    updateTodo
 }

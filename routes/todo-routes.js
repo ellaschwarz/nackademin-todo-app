@@ -5,14 +5,13 @@ const router = new Router();
 const Todo = require('../controllers/todo-controller');
 
 //Creating todos
-router.post('/', Todo.createTodo);
+router.post('/', Todo.createTodoItem);
 
 //Reading todos
-router.get('/', Todo.readTodos);
-
+router.get('/', Todo.readTodoItem);
 
 // //Updating todos
-// router.put('/', xxx);
+router.put('/:id', Todo.updateTodoItem);
 
 // //Deleting todos
 // router.delete('/', xxx);
