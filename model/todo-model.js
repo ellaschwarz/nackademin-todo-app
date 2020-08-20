@@ -25,8 +25,13 @@ const updateTodo = async (todoId, title, done) => {
         return doc;
 };
 
+const removeTodo = async (todoId) => {
+    const doc = await todoDB.remove({_id: todoId}, {});
+};
+
 module.exports = {
     findTodos,
     insertTodo,
-    updateTodo
+    updateTodo,
+    removeTodo
 }

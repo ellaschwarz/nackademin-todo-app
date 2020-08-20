@@ -10,10 +10,10 @@ router.post('/', Todo.createTodoItem);
 //Reading todos
 router.get('/', Todo.readTodoItem);
 
-// //Updating todos
+//Updating todos
 router.put('/:id', Todo.updateTodoItem);
 
-// //Deleting todos
-// router.delete('/', xxx);
+//Deleting todos
+router.delete('/:id', Todo.deleteTodoItem);
 
 module.exports = router;
