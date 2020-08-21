@@ -30,7 +30,7 @@ const updateTodoItem = async (req, res) => {
     const {title, done} = req.body;
     try {
         const todo = await updateTodo(todoID, title, done);
-        res.status(200).send(todo);
+        res.sendStatus(200).send(todo);
     } catch (err) {
         res.status(404).send(err);
     };
