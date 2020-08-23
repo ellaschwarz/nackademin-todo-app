@@ -11,15 +11,22 @@
     
     <div class="app">
     <h1 class="app_title">Todo-list</h1>
+    <select class="task-filter">Sort by: 
+        <option value="Created-Latest">Created - Latest</option>
+        <option value="Created-Earliest">Created - Earliest</option>
+        <option value="Updated-Latest ">Updated - Latest</option>
+        <option value="Updated-Earliest ">Updated - Earliest</option>
+    </select>
  
-
+    <br>
     <ul class="todo-list" id="todo-list"></ul>
-
-    <h1>Add a todo</h1>
+    <button id="next_button">Next</button>
+    <br>
+    <!-- <h3>Add a todo</h3> -->
     <!-- <form id="add_todo_form" action="http://127.0.0.1:3000/" method="POST" target="http://127.0.0.1:3000"> -->
-    <label for="add_todo"></label>
-    <input type="text" id="title" class="title_input" name="title" placeholder="Add a todo" required>
-    <button id="submit_todo">Add</button>
+    <!-- <label for="add_todo"></label> -->
+    <input type="text" id="title" class="title_input" name="title" placeholder="Add a todo" required><button id="submit_todo">+</button></input>
+    
     <!-- </form> -->
 
     </div>

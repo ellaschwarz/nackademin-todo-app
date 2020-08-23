@@ -16,4 +16,7 @@ router.put('/:id', Todo.updateTodoItem);
 //Deleting todos
 router.delete('/:id', Todo.deleteTodoItem);
 
+//Reading paginated todos
+router.get('/page/:page', Todo.paginateTodoItems);
+
 module.exports = router;

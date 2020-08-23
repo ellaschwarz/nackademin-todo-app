@@ -6,9 +6,16 @@ const todoDB = new Datastore({
 });
 
 const findTodos = async () => {
-    const doc = await todoDB.find({});
+    const doc = await todoDB.find({}).sort({created: -1}).limit(10);
     return doc;
 }
+
+const findNextTodos = async(perPage, page) => {
+    console.log(page);
+    const doc = await todoDB.find({}).sort({created: -1}).skip(page*perPage).limit(perPage);
+    return doc;
+};
+
 
 const insertTodo = async (title, done) => {
     const doc = await todoDB.insert({
@@ -33,5 +40,6 @@ module.exports = {
     findTodos,
     insertTodo,
     updateTodo,
-    removeTodo
+    removeTodo,
+    findNextTodos
 }

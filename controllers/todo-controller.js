@@ -3,7 +3,8 @@ const {
     findTodos,
     insertTodo,
     updateTodo,
-    removeTodo
+    removeTodo,
+    findNextTodos
 } = require('../model/todo-model');
 
 const createTodoItem = async (req, res) => {
@@ -46,9 +47,21 @@ const deleteTodoItem = async (req, res) => {
     };
 };
 
+const paginateTodoItems = async (req, res) => {
+    let perPage = 5;
+    let page = Math.max(0, req.params.page);
+    try {
+        const todo = await findNextTodos(perPage, page);
+        res.status(200).send(todo);
+    } catch (err) {
+        res.status(202).send(err);
+    }
+};
+
 module.exports = {
     createTodoItem,
     readTodoItem,
     updateTodoItem,
-    deleteTodoItem
+    deleteTodoItem,
+    paginateTodoItems
 };
