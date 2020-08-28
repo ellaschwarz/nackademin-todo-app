@@ -1,22 +1,14 @@
 const {
     insertUser,
-    loginUser
+    loginUser,
+    updateUser
 } = require('../model/user-model');
 
-const jwt = require('jsonwebtoken');
-const bcrypt = require('bcryptjs');
-const secret = process.env.SECRET;
-
 const createUser = async (req, res) => {
-    console.log(req.body);
-    const hash = bcrypt.hashSync(req.body.password, 10);
-    let userData = {
-        username: req.body.username,
-        password: hash,
-        role: "user"
-    };
+
+    const {username, password} = req.body;
     try {
-        const user = await insertUser(userData);
+        const user = await insertUser(username, password, req.user.role);
         res.status(200).send(user)
     } catch (err) {
         res.status(404).send(err)
@@ -24,20 +16,37 @@ const createUser = async (req, res) => {
 };
 
 const userLogin = async (req, res) => {
-    try {
-        let username = req.body.username;
-        let password = req.body.password;
+    let username = req.body.username;
+    let password = req.body.password;
 
-        const user = await loginUser(username, password);
-        const token = jwt.sign(user, secret, {expiresIn: "1h"});
+    try {
+        const token = await loginUser(username, password);
         res.status(200).send(token);
     } catch (err) {
         console.log('catchhhhh')
         res.status(404).send(err);
     }
-}
+};
+
+const userUpdate = async (req, res) => {
+    let userData = {
+        id: req.params.id,
+        username: req.body.username,
+        password: req.body.password
+    }
+
+    try {
+        console.log('try');
+        const user = await updateUser(userData);
+        console.log(user);
+        res.sendStatus(200).send(user);
+    } catch (err) {
+        res.status(404).send(err);
+    };
+};
 
 module.exports = {
     createUser,
-    userLogin
+    userLogin,
+    userUpdate
 };

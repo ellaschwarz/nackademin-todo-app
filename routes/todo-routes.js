@@ -4,17 +4,24 @@ const router = new Router();
 
 const Todo = require('../controllers/todo-controller');
 
+const {
+    authorizeUser
+} = require('../middleware/authorize')
+
 //Creating todos
-router.post('/', Todo.createTodoItem);
+router.post('/', authorizeUser, Todo.createTodoItem);
 
 //Reading todos
-router.get('/', Todo.readTodoItem);
+router.get('/', authorizeUser, Todo.readTodoItem);
+
+//Reading one todo
+router.get('/:id', authorizeUser, Todo.readOneTodoItem)
 
 //Updating todos
-router.put('/:id', Todo.updateTodoItem);
+router.patch('/:id', authorizeUser, Todo.updateTodoItem);
 
 //Deleting todos
-router.delete('/:id', Todo.deleteTodoItem);
+router.delete('/:id', authorizeUser, Todo.deleteTodoItem);
 
 //Reading paginated todos
 router.get('/page/:page', Todo.paginateTodoItems);
