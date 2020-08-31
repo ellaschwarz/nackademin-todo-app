@@ -21,7 +21,8 @@ const userLogin = async (req, res) => {
 
     try {
         const token = await loginUser(username, password);
-        res.status(200).send(token);
+        console.log(token);
+        res.status(200).json(token);
     } catch (err) {
         console.log('catchhhhh')
         res.status(404).send(err);

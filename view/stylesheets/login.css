@@ -1,0 +1,38 @@
+
+
+.register_app, .login_app {
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+    background-color: #fff;
+    font-family: var(--font);
+    border-radius: 16px;
+    font-size: 15px;
+    overflow: hidden;
+    color: #455963;
+    max-height: 50vh;
+    box-shadow: 0 20px 80px rgba(0,0,0,.3);
+}
+
+.register_app{
+    display: none;
+}
+
+.username_input, .password_input {
+    flex: 1;
+    font-size: 16px;
+    font-family: var(--font);
+    padding: 10px 20px;
+    border: 0;
+    box-shadow: 0 -1px 0 #e2e4ea inset;
+    color: #455963;
+    width: 90%;
+  }
+  
+  .username_input::placeholder, .password_input::placeholder {
+    color: #a8b5bb;
+  }
+  
+  .username_input:focus, .password_input:focus {
+    box-shadow: 0 -1px 0 #bdcdd6 inset;
+  }

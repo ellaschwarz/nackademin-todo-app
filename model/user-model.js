@@ -20,6 +20,8 @@ const insertUser = async (username, password, role) => {
       };
       const doc = await usersDB.insert(userData);
       return doc;
+    } else {
+        throw new Error('This usename already exists, try another one.')
     }
   } else {
     throw new Error("Only admin can create a new user");
@@ -28,7 +30,7 @@ const insertUser = async (username, password, role) => {
 
 const loginUser = async (username, password) => {
   const doc = await usersDB.findOne({ username: username }, {});
-
+    console.log(doc)
   if (bcrypt.compareSync(password, doc.password)) {
     const token = await jwt.sign(
       { username: doc.username, id: doc._id, role: doc.role },

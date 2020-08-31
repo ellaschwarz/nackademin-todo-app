@@ -1,4 +1,3 @@
-{"userData":{"username":"ella","password":"$2a$10$qcyc5I5hndUewK3/yBWQ5uzdGXmINqw27zOYzQ3vxtgoz0ktHeOZ.","role":"user"},"_id":"IUr20QxhvAyDGGmE"}
 {"username":"ella","password":"$2a$10$hxHAXGLB5qGVNwVouwf9z.UtD1c5GtftkE3qjys9cZWMOhJy3AWpC","role":"admin","_id":"MtcY3DfKjOieMC7U"}
 {"username":"notadmin","password":"$2a$10$BsorrfBSrbP1D7iJvPHpO.YqZoyQbruGUe6oAGfBSxty71i8AXGUa","role":"user","_id":"kFZWhZx6UZ6GEdEP"}
 {"username":"user","password":"$2a$10$5HY9iZkekXFhe4pDLmunluVsZX6KBkQ4V0togNYVf559V/ArKdJLy","role":"user","_id":"uaDDFPTCBWtL1i5O"}

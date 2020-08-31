@@ -4,6 +4,7 @@ const secret = process.env.SECRET;
 
 const authorizeUser = async (req, res, next) => {
     if(!req.headers.authorization) {
+        res.redirect('/');
         return res.sendStatus(403);
     }
     const token = req.headers.authorization.replace('Bearer ', '');
@@ -20,7 +21,9 @@ const authorizeUser = async (req, res, next) => {
                 return this._id == document._id;
             }
         };
+        console.log(req.user);
         next();
+
     } catch (err) {
         console.log(err);
         res.sendStatus(403);

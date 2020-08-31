@@ -49,6 +49,7 @@ document.addEventListener("DOMContentLoaded", e => {
 
     deleteButton.addEventListener('click', function(e) {
       deleteTodos(item);
+      deleteListItem(item);
     });
 
     editButton.addEventListener('click', function(e) {
@@ -56,6 +57,11 @@ document.addEventListener("DOMContentLoaded", e => {
     });
 
   };
+
+  const deleteListItem = (item) => {
+    let itemToBeDeletedChild = document.getElementById(item._id);
+    itemToBeDeletedChild.parentNode.remove();
+  }
 
 //   const checkIfChecked = () => {
 //     let checkBox = document.getElementById(id);
@@ -65,31 +71,40 @@ document.addEventListener("DOMContentLoaded", e => {
 //     });
 //   }
 
-  const getTodos = async () => {
-    let request = await fetch("http://127.0.0.1:3000/todo");
-    const todoItems = await request.json();
+const token = sessionStorage.getItem('token');
+const bearer = 'Bearer ' + token;
 
+
+   const getTodos = async () => {
+    let request = await fetch("http://127.0.0.1:3000/todos", {
+      headers: {Authorization: bearer}});
+    const todoItems = await request.json();
     todoItems.forEach(item => {
       createListItem(item);
     });
   };
-
+  
   const postTodos = async () => {
     let title = document.getElementById("title").value;
-    //let checkBox = document.getElementById('checkbox').checked;
 
     let data = {
       title: title,
       done: false
     };
 
-    let response = await fetch("http://127.0.0.1:3000/todo", {
+    console.log(token);
+
+    let response = await fetch("http://127.0.0.1:3000/todos", {
       method: "POST",
+
       headers: {
-        "Content-Type": "application/json;charset=utf-8"
+        "Content-Type": "application/json;charset=utf-8",
+        "Authorization": bearer
       },
       body: JSON.stringify(data)
     });
+
+    console.log(response);
 
     let item = await response.json();
 
@@ -109,10 +124,11 @@ document.addEventListener("DOMContentLoaded", e => {
       done: checkBox
     };
 
-    let response = await fetch("http://127.0.0.1:3000/todo/" + id, {
-      method: "PUT",
+    let response = await fetch("http://127.0.0.1:3000/todos/" + id, {
+      method: "PATCH",
       headers: {
-        "Content-Type": "application/json;charset=utf-8"
+        "Content-Type": "application/json;charset=utf-8",
+        "Authorization": bearer
       },
       body: JSON.stringify(data)
     });
@@ -121,17 +137,19 @@ document.addEventListener("DOMContentLoaded", e => {
   const deleteTodos = async item => {
     let id = item._id;
 
-    let response = await fetch("http://127.0.0.1:3000/todo/" + id, {
+    let response = await fetch("http://127.0.0.1:3000/todos/" + id, {
       method: "DELETE",
       headers: {
-        "Content-Type": "application/json;charset=utf-8"
+        "Content-Type": "application/json;charset=utf-8",
+        "Authorization": bearer
+
       }
     });
   };
 
   document.getElementById('next_button').addEventListener('click', async function(e) {
     let next = 1;
-    let request = await fetch("http://127.0.0.1:3000/todo/page/" + next);
+    let request = await fetch("http://127.0.0.1:3000/todos/page/" + next);
     const todoItems = await request.json();
     console.log(todoItems);
 
@@ -143,20 +161,22 @@ document.addEventListener("DOMContentLoaded", e => {
     console.log(next);
 });
 
-  getTodos();
 
   let submit = document.getElementById("submit_todo");
   submit.addEventListener("click", function(e) {
     postTodos();
     let title = document.getElementById("title");
-    title.innerHTML = " ";
-
+    title.value = " ";
+   // title.placeholder = "Add a todo";
   });
 
 
+  //module.exports = {getTodos};
   //const pagination = async () => {
 
-//}
+  //}
+
+  getTodos();
 
 });
 

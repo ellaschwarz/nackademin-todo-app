@@ -5,11 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="stylesheets/styles.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/login.css">
+
     <title>Todo</title>
 </head>
 <body>
+
+    <!-- LOGIN APP -->
+    <div class="login_app" id="login_app">
+
+        <h1 class="login_title">LOGIN</h1>
+        <input type="text" id="username_login" class="username_input" name="username" placeholder="Enter your username" required>
+        <input type="password" id="password_login" class="password_input" name="password" placeholder="Enter your password" required>
+        <button id="signin_btn">SIGN IN</button>
+        <button id="register_btn">CREATE NEW USER</button>
+
+
+    </div>
+    <!-- LOGIN APP -->
+
+        <!-- LOGIN APP -->
+        <div class="register_app">
+        
+                <h1 class="register_title">REGISTER</h1>
+                <input type="text" id="username_register" class="username_input" name="username" placeholder="Type a username" required>
+                <input type="password" id="password_register" class="password_input" name="password" placeholder="Type a password" required>
+
+                <button id="register_in">SIGN IN</button>
+        
+        </div>
+            <!-- LOGIN APP -->
+
     
-    <div class="app">
+    <!-- TODO APP -->
+    <div class="app" id="app">
     <h1 class="app_title">Todo-list</h1>
     <select class="task-filter">Sort by: 
         <option value="Created-Latest">Created - Latest</option>
@@ -25,13 +54,16 @@
     <!-- <h3>Add a todo</h3> -->
     <!-- <form id="add_todo_form" action="http://127.0.0.1:3000/" method="POST" target="http://127.0.0.1:3000"> -->
     <!-- <label for="add_todo"></label> -->
-    <input type="text" id="title" class="title_input" name="title" placeholder="Add a todo" required><button id="submit_todo">+</button></input>
+    <input type="text" id="title" class="title_input" name="title" placeholder="Add a todo" required>
+    <button id="submit_todo">+</button></input>
     
     <!-- </form> -->
 
     </div>
-
+    <!-- TODO APP -->
     <script src="index.js"></script>
+    <script src="login.js"></script>
+
 
 </body>
 </html>
