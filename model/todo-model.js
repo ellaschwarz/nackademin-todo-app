@@ -1,8 +1,4 @@
-const Datastore = require("nedb-promises");
-const todoDB = new Datastore({
-  filename: "./db/todo.db",
-  autoload: true
-});
+const {todoDB} = require('../db/db')
 
 const findTodos = async (filter) => {
     const doc = await todoDB
@@ -26,11 +22,12 @@ const findNextTodos = async (filter, perPage, page) => {
     return doc;
 };
 
-const insertTodo = async (title, done, userId) => {
+const insertTodo = async (title, done, userId, listId) => {
   const doc = await todoDB.insert({
     title,
     done,
     userId,
+    listId,
     created: new Date().toLocaleString()
   });
   return doc;

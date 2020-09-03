@@ -1,6 +1,5 @@
 {"title":"Skriv en bok","done":false,"created":"2020-08-21 14:03:52","_id":"100Y349p19JI7N6L","updated":"2020-08-23 09:38:53"}
 {"title":"Hoppa upp och ner","userId":"MtcY3DfKjOieMC7U","created":"2020-08-28 11:16:14","_id":"2CYuAedBNYPIsDi7","done":false,"updated":"2020-08-29 15:51:44"}
-{"title":"fjweofjiee","done":false,"userId":"MtcY3DfKjOieMC7U","created":"2020-08-29 17:31:32","_id":"BexEmEsuiQZEqV8x"}
 {"title":"testetetet","done":false,"userId":"MtcY3DfKjOieMC7U","created":"2020-08-29 17:24:52","_id":"FhEgymxzAfqRcChg"}
 {"title":"Köp mjölk","done":false,"created":"2020-08-21 13:57:29","_id":"GXfKSfEZzN4WCaJ8","updated":"2020-08-23 09:37:41"}
 {"title":"Kolla på film","done":false,"created":"2020-08-21 13:57:54","_id":"LSgVWbOKr5r3IhET","updated":"2020-08-23 09:38:44"}
@@ -9,10 +8,10 @@
 {"title":"Äta chips och kolla på film","userId":"MtcY3DfKjOieMC7U","created":"2020-08-28 20:13:55","_id":"XlKYCGpf4VW5uX7C"}
 {"title":"Borsta tänderna","done":false,"created":"2020-08-21 13:35:37","_id":"YDG5gYHUv7R2GMCW"}
 {"title":"Ät en kaka","done":false,"created":"2020-08-21 14:37:00","_id":"YiAlEQ0WYdL4KkvY"}
+{"title":"bryans todoooo","userId":"DqEv3G6IMDfd761q","created":"2020-08-31 11:31:43","_id":"ex2oAUP4MfDKCu7A","updated":"2020-08-31 11:33:34"}
 {"title":"Städa","done":false,"created":"2020-08-21 16:07:27","_id":"g6PsF0p7CsLCVTey","updated":"2020-08-23 20:24:52"}
+{"title":"todo in list","userId":"M5R5qQE1zLPI9ZBA","listId":"MtcY3DfKjOieMC7U","created":"2020-09-03 10:54:14","_id":"jl85CxDSSx9TAGD9"}
 {"title":"hellooooo","done":false,"userId":"MtcY3DfKjOieMC7U","created":"2020-08-29 17:27:33","_id":"lm37bsF0CRg9m3EB"}
 {"title":"Ät en glass","done":false,"created":"2020-08-21 13:35:45","_id":"qeZlThUgLF8iRWnm"}
 {"title":"khohkoh","done":false,"userId":"MtcY3DfKjOieMC7U","created":"2020-08-29 17:30:04","_id":"t1lSAIUqZ0rNi33Q"}
-{"$$deleted":true,"_id":"BexEmEsuiQZEqV8x"}
-{"title":"bryans todo","userId":"DqEv3G6IMDfd761q","created":"2020-08-31 11:31:43","_id":"ex2oAUP4MfDKCu7A"}
-{"title":"bryans todoooo","userId":"DqEv3G6IMDfd761q","created":"2020-08-31 11:31:43","_id":"ex2oAUP4MfDKCu7A","updated":"2020-08-31 11:33:34"}
+{"title":"This is a list item","userId":"M5R5qQE1zLPI9ZBA","listId":"MtcY3DfKjOieMC7U","created":"2020-09-03 11:22:26","_id":"zY61yZaCBzgAz5yg"}

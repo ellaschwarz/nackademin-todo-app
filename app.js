@@ -2,7 +2,7 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
-const port = process.env.PORT || 3000;
+
 
 //Middleware
 require('dotenv').config();
@@ -22,8 +22,7 @@ app.use('/todos', todoRoutes);
 const userRoutes = require('./routes/user-routes');
 app.use('/users', userRoutes);
 
-//Listening on port
-app.listen(3000, () => {
-    console.log(`Listening on port ${port}`);
-});
+const listRoutes = require('./routes/list-routes');
+app.use('/lists', listRoutes);
 
+module.exports = app;

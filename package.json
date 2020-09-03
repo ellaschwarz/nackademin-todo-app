@@ -2,10 +2,10 @@
   "name": "nackademin-todo-app",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "start.js",
   "scripts": {
     "start": "nodemon",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "ENVIRONMENT=test mocha --recursive"
   },
   "repository": {
     "type": "git",
@@ -20,10 +20,13 @@
   "homepage": "https://github.com/ellaschwarz/nackademin-todo-app#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
+    "mocha": "^8.1.3",
     "nedb": "^1.8.0",
     "nedb-promises": "^4.0.4",
     "nodemon": "^2.0.4"
