@@ -8,8 +8,12 @@ const createUser = async (req, res) => {
 
     const {username, password} = req.body;
     try {
-        const user = await insertUser(username, password, req.user.role);
-        res.status(200).send(user)
+        if(req.user.role = 'admin') {
+            const user = await insertUser(username, password);
+            res.status(200).send(user)
+        } else {
+            throw new Error('Only admin can create a new user');
+        }
     } catch (err) {
         res.status(404).send(err)
     }

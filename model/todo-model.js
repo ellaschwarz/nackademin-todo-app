@@ -4,20 +4,12 @@ const todoDB = new Datastore({
   autoload: true
 });
 
-const findTodos = async (id, role) => {
-  if (role === "admin") {
+const findTodos = async (filter) => {
     const doc = await todoDB
-      .find({})
+      .find(filter)
       .sort({ created: -1 })
       .limit(10);
     return doc;
-  } else if (role === "user") {
-    const doc = await todoDB
-      .find({ userId: id })
-      .sort({ created: -1 })
-      .limit(10);
-    return doc;
-  }
 };
 
 const findOneTodo = async id => {
@@ -25,22 +17,13 @@ const findOneTodo = async id => {
   return doc;
 };
 
-const findNextTodos = async (user, perPage, page) => {
-  if (user.role === "admin") {
+const findNextTodos = async (filter, perPage, page) => {
     const doc = await todoDB
-      .find({})
+      .find(filter)
       .sort({ created: -1 })
       .skip(page * perPage)
       .limit(perPage);
     return doc;
-  } else if (user.role === "user") {
-    const doc = await todoDB
-      .find({ userId: id })
-      .sort({ created: -1 })
-      .skip(page * perPage)
-      .limit(perPage);
-    return doc;
-  }
 };
 
 const insertTodo = async (title, done, userId) => {
@@ -69,16 +52,11 @@ const updateTodo = async (todoId, title, done, user) => {
 
 const removeTodo = async (todoId, role) => {
   console.log(role);
-  if (role === "admin") {
     const doc = await todoDB.remove({ _id: todoId });
     console.log("Går in i modellen remove todo");
     console.log(doc);
     return doc;
     // res.sendStatus(200).send(doc);
-  } else {
-    throw new Error("Not authorized to delete");
-    //return doc;
-  }
 };
 
 module.exports = {

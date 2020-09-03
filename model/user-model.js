@@ -8,8 +8,7 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const secret = process.env.SECRET;
 
-const insertUser = async (username, password, role) => {
-  if (role === "admin") {
+const insertUser = async (username, password) => {
     const isRegistered = await usersDB.findOne({ username: username });
     if (!isRegistered) {
       const hash = bcrypt.hashSync(password, 10);
@@ -23,9 +22,6 @@ const insertUser = async (username, password, role) => {
     } else {
         throw new Error('This usename already exists, try another one.')
     }
-  } else {
-    throw new Error("Only admin can create a new user");
-  }
 };
 
 const loginUser = async (username, password) => {

@@ -12,7 +12,7 @@ const {
 router.post('/', authorizeUser, Todo.createTodoItem);
 
 //Reading todos
-router.get('/', authorizeUser, Todo.readTodoItem);
+router.get('/', authorizeUser, Todo.readTodoItems);
 
 //Reading one todo
 router.get('/:id', authorizeUser, Todo.readOneTodoItem)
