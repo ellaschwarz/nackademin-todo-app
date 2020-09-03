@@ -20,7 +20,6 @@ const createTodoItem = async (req, res) => {
 
 const readTodoItems = async (req, res) => {
     try {
-        console.log(req.user);
         if(req.user.role === 'admin') {
             const todo = await findTodos({});
             return res.status(200).json(todo);
@@ -46,10 +45,15 @@ const readOneTodoItem = async (req, res) => {
 const updateTodoItem = async (req, res) => {
     const todoID = req.params.id;
     const {title, done} = req.body;
+    
     try {
-        const todo = await updateTodo(todoID, title, done, req.user);
-        console.log(todo);
+        const oneTodo = await findOneTodo(todoId);
+        if (req.user.id === oneTodo.userId || req.user.role === "admin") {
+        const todo = await updateTodo(todoID, title, done);
         return res.sendStatus(200).json(todo);
+        } else {
+            throw new Error("Not authorized to edit");
+          }
     } catch (err) {
         return res.status(404).json(err);
     };
@@ -57,10 +61,9 @@ const updateTodoItem = async (req, res) => {
 
 const deleteTodoItem = async (req, res) => {
     const todoID = req.params.id;
-    console.log(req.user.role);
     try {
         if(req.user.role === 'admin') {
-            const todo = await removeTodo(todoID, req.user.role);
+            const todo = await removeTodo(todoID);
             console.log('Går in i controllern remove todo');
             console.log(todo);
             return res.status(200).json(todo);

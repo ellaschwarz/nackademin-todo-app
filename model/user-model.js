@@ -35,6 +35,11 @@ const loginUser = async (username, password) => {
   }
 };
 
+const clearAllUsers = async () => {
+  const doc = await usersDB.remove({}, { multi: true });
+  return doc;
+}
+
 // findUser = async (req, res) => {
 
 // }
@@ -48,6 +53,7 @@ const loginUser = async (username, password) => {
 
 module.exports = {
   insertUser,
-  loginUser
+  loginUser,
+  clearAllUsers
   //updateUser
 };

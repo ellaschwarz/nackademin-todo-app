@@ -33,22 +33,17 @@ const insertTodo = async (title, done, userId, listId) => {
   return doc;
 };
 
-const updateTodo = async (todoId, title, done, user) => {
-  const todo = await findOneTodo(todoId);
-  if (user.id === todo.userId || user.role === "admin") {
+const updateTodo = async (todoId, title, done) => {
+
     const doc = await todoDB.update(
       { _id: todoId },
       { $set: { title, done, updated: new Date().toLocaleString() } },
       {}
     );
     return doc;
-  } else {
-    throw new Error("Not authorized to edit");
-  }
-};
+  };
 
-const removeTodo = async (todoId, role) => {
-  console.log(role);
+const removeTodo = async (todoId) => {
     const doc = await todoDB.remove({ _id: todoId });
     console.log("Går in i modellen remove todo");
     console.log(doc);

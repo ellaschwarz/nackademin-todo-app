@@ -21,27 +21,18 @@ const findOneList = async id => {
     return doc;
   };
   
-  const updateList = async (listId, title, user) => {
-    const list = await findOneList(listId);
-    if (user.id === list.userId || user.role === "admin") {
+  const updateList = async (listId, title) => {
       const doc = await listDB.update(
         { _id: listId },
         { $set: { title, updated: new Date().toLocaleString() } },
         {}
       );
       return doc;
-    } else {
-      throw new Error("Not authorized to edit");
-    }
-  };
+    };
   
-  const removeList = async (listId, role) => {
-    console.log(role);
+  const removeList = async (listId) => {
       const doc = await listDB.remove({ _id: listId });
-      console.log("Går in i modellen remove list");
-      console.log(doc);
       return doc;
-      // res.sendStatus(200).send(doc);
   };
 
   const clearAllLists = async () => {
@@ -50,7 +41,7 @@ const findOneList = async id => {
   }
 
   const countLists = async () => {
-    const doc = await listDB.countDocuments(filter);
+    const doc = await listDB.count({});
     return doc;
   }
 
