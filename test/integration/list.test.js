@@ -22,15 +22,13 @@ describe('RESTful resource test for lists', () => {
 			user.username,
 			'tester'
 		);
-        this.currentTest.token = authenticatedUser;
+		this.currentTest.token = authenticatedUser;
 
-        let title = "This is a test list";
-        let userId = this.currentTest.userId;
-        const list = await listModel.insertList(title, userId);
-        this.currentTest.list = list;
-        this.currentTest.listId = list._id;
-
-        
+		let title = 'This is a test list';
+		let userId = this.currentTest.userId;
+		const list = await listModel.insertList(title, userId);
+		this.currentTest.list = list;
+		this.currentTest.listId = list._id;
 	});
 
 	it('should create a new list ', async function() {
@@ -51,32 +49,35 @@ describe('RESTful resource test for lists', () => {
 	});
 
 	it('should read all lists', async function() {
+		request(app)
+			.get('/lists')
+			.set('Authorization', `Bearer ${this.test.token}`)
+			.set('Content-Type', 'application/json')
+			.end((err, res) => {
+				expect(res).to.have.status(200);
+				expect(res).to.be.json;
+				expect(res.body).to.deep.an('array');
+				expect(res.body[0]).to.have.all.keys(
+					'_id',
+					'created',
+					'title',
+					'userId'
+				);
+			});
+	});
+	it('should read one list', async function() {
+		let listId = this.test.listId;
 
-        request(app)
-            .get('/lists')
-            .set('Authorization', `Bearer ${this.test.token}`)
-            .set('Content-Type', 'application/json')
-            .end((err, res) => {
-                expect(res).to.have.status(200);
-                expect(res).to.be.json;
-                expect(res.body).to.deep.an('array');
-                expect(res.body[0]).to.have.all.keys('_id', 'created', 'title', 'userId');
-            });
-    });
-    it('should read one list', async function () {
-
-        let listId = this.test.listId;
-
-        request(app)
-            .get(`/lists/${listId}`)
-            .set('Authorization', `Bearer ${this.test.token}`)
-            .set('Content-Type', 'application/json')
-            .end((err, res) => {
-                expect(res).to.have.status(200);
-                expect(res).to.be.json;
-                console.log(res.body);
-                expect(res.body).to.deep.a('object');
-                expect(res.body).to.have.all.keys('_id', 'created', 'title', 'userId');
-            })
-    })
+		request(app)
+			.get(`/lists/${listId}`)
+			.set('Authorization', `Bearer ${this.test.token}`)
+			.set('Content-Type', 'application/json')
+			.end((err, res) => {
+				expect(res).to.have.status(200);
+				expect(res).to.be.json;
+				console.log(res.body);
+				expect(res.body).to.deep.a('object');
+				expect(res.body).to.have.all.keys('_id', 'created', 'title', 'userId');
+			});
+	});
 });
