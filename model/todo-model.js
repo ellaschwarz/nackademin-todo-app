@@ -45,8 +45,6 @@ const updateTodo = async (todoId, title, done) => {
 
 const removeTodo = async (todoId) => {
     const doc = await todoDB.remove({ _id: todoId });
-    console.log("Går in i modellen remove todo");
-    console.log(doc);
     return doc;
     // res.sendStatus(200).send(doc);
 };

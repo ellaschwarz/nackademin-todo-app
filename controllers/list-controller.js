@@ -61,7 +61,6 @@ const updateTodoList = async (req, res) => {
     try {
         if (req.user.id === list.userId || req.user.role === "admin") {
         const list = await updateList(listId, title);
-        console.log(list);
         return res.sendStatus(200).json(list);
         } else {
             throw new Error("Not authorized to edit");
@@ -73,19 +72,15 @@ const updateTodoList = async (req, res) => {
 
 const deleteTodoList = async (req, res) => {
     const listId = req.params.id;
-    console.log(req.user.role);
     try {
         if(req.user.role === 'admin') {
             const list = await removeList(listId);
-            console.log('Går in i controllern remove todo');
-            console.log(list);
             return res.status(200).json(list);
         } else {
             throw new Error('Not authorized to delete');
         }
 
     } catch (err) {
-        console.log('Skickar 404');
         return res.status(401).json(err);
     };
 };

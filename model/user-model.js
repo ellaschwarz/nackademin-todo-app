@@ -22,7 +22,6 @@ const insertUser = async (username, password) => {
 
 const loginUser = async (username, password) => {
   const doc = await usersDB.findOne({ username: username }, {});
-    console.log(doc)
   if (bcrypt.compareSync(password, doc.password)) {
     const token = await jwt.sign(
       { username: doc.username, id: doc._id, role: doc.role },

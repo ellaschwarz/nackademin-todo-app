@@ -12,8 +12,6 @@ document.addEventListener('DOMContentLoaded', e => {
         password: password
     };
 
-    console.log(data);
-
     let response = await fetch("http://127.0.0.1:3000/users/login", {
       method: "POST",
       headers: {

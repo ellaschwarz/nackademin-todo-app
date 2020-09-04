@@ -1,33 +1,43 @@
-{"title":"This is a test list","created":"2020-09-03 18:41:51","_id":"4dw4PUzProZx7Lkt"}
-{"title":"This is another test list","userId":"yHNl6J7qI2UNqt3i","created":"2020-09-03 18:41:51","_id":"ZOxuGeeUJz3wzdrL"}
-{"title":"This is another test list","userId":"yHNl6J7qI2UNqt3i","created":"2020-09-03 18:41:51","_id":"i1JZP59JYcEGbJoI"}
-{"title":"This is another test list","userId":"yHNl6J7qI2UNqt3i","created":"2020-09-03 18:41:51","_id":"zgNUKCwhunqOJ6RK"}
-{"title":"This is another test list","userId":"yHNl6J7qI2UNqt3i","created":"2020-09-03 18:41:51","_id":"lOXyfeUvf9usXweO"}
-{"title":"This is another test list","userId":"yHNl6J7qI2UNqt3i","created":"2020-09-03 18:41:51","_id":"nqJHOvFnpYHvzJkt"}
-{"title":"This is another test list","userId":"yHNl6J7qI2UNqt3i","created":"2020-09-03 18:41:51","_id":"7bUVJeOVv53Nk3Zi"}
-{"title":"This is another test list","userId":"yHNl6J7qI2UNqt3i","created":"2020-09-03 18:41:51","_id":"V9nzBDJS3fKPLJ8O"}
-{"title":"This is another test list","userId":"yHNl6J7qI2UNqt3i","created":"2020-09-03 18:41:51","_id":"wCUnX9NqRtB7u2sP"}
-{"title":"This is another test list","userId":"yHNl6J7qI2UNqt3i","created":"2020-09-03 18:41:51","_id":"ySyfjbxT3bvGWv8k"}
-{"$$deleted":true,"_id":"4dw4PUzProZx7Lkt"}
-{"$$deleted":true,"_id":"7bUVJeOVv53Nk3Zi"}
-{"$$deleted":true,"_id":"V9nzBDJS3fKPLJ8O"}
-{"$$deleted":true,"_id":"ZOxuGeeUJz3wzdrL"}
-{"$$deleted":true,"_id":"i1JZP59JYcEGbJoI"}
-{"$$deleted":true,"_id":"lOXyfeUvf9usXweO"}
-{"$$deleted":true,"_id":"nqJHOvFnpYHvzJkt"}
-{"$$deleted":true,"_id":"wCUnX9NqRtB7u2sP"}
-{"$$deleted":true,"_id":"ySyfjbxT3bvGWv8k"}
-{"$$deleted":true,"_id":"zgNUKCwhunqOJ6RK"}
-{"title":"This is a test list","created":"2020-09-03 18:41:51","_id":"ZxzOs1HQ6sinIDk7"}
-{"title":"This is also a test list","userId":"5LgmS5HWIu472uf0","created":"2020-09-03 18:41:51","_id":"4fJ6UUSMWaGJs8yx"}
-{"$$deleted":true,"_id":"4fJ6UUSMWaGJs8yx"}
-{"$$deleted":true,"_id":"ZxzOs1HQ6sinIDk7"}
-{"title":"This is a test list","created":"2020-09-03 18:41:51","_id":"5JdAdxRyuJzSk71X"}
-{"$$deleted":true,"_id":"5JdAdxRyuJzSk71X"}
-{"title":"This is a test list","created":"2020-09-03 18:41:51","_id":"41w6BxNqijNgfKr2"}
-{"$$deleted":true,"_id":"41w6BxNqijNgfKr2"}
-{"title":"This is a test list","created":"2020-09-03 18:41:51","_id":"xS9KU6eMp77AqUXG"}
-{"title":"Updated list title","created":"2020-09-03 18:41:51","_id":"xS9KU6eMp77AqUXG","updated":"2020-09-03 18:41:51"}
-{"$$deleted":true,"_id":"xS9KU6eMp77AqUXG"}
-{"title":"This is a test list","created":"2020-09-03 18:41:51","_id":"PtI0NxBgSumkKnNW"}
-{"$$deleted":true,"_id":"PtI0NxBgSumkKnNW"}
+{"title":"This is a test list","userId":"uMwecCPe34cJzXne","created":"2020-09-04 10:20:18","_id":"FGAVheYJxpcDQzr1"}
+{"$$deleted":true,"_id":"FGAVheYJxpcDQzr1"}
+{"title":"This is a test list","userId":"VigqUUV5iuILFWgf","created":"2020-09-04 10:20:58","_id":"CveZ6ChOeBLnggM9"}
+{"title":"This is a new list from HTTP-request","userId":"VigqUUV5iuILFWgf","created":"2020-09-04 10:20:59","_id":"hjIPZccm6519WkGz"}
+{"$$deleted":true,"_id":"CveZ6ChOeBLnggM9"}
+{"$$deleted":true,"_id":"hjIPZccm6519WkGz"}
+{"title":"This is a test list","userId":"3xwGGuk2p0jzdU2f","created":"2020-09-04 10:20:59","_id":"FFCn5nLOZdZG2VrO"}
+{"$$deleted":true,"_id":"FFCn5nLOZdZG2VrO"}
+{"title":"This is a test list","userId":"g5ANbIvWkqoRbcrm","created":"2020-09-04 10:20:59","_id":"qkxzNvxpqkQAucdb"}
+{"$$deleted":true,"_id":"qkxzNvxpqkQAucdb"}
+{"title":"This is a test list","userId":"pxYJ4R2oNFZ0FbIc","created":"2020-09-04 10:20:59","_id":"KW4u36Ij8z0f3dnU"}
+{"title":"This is another test list","userId":"pxYJ4R2oNFZ0FbIc","created":"2020-09-04 10:20:59","_id":"0ZAZlKJaRmCBSkVz"}
+{"title":"This is another test list","userId":"pxYJ4R2oNFZ0FbIc","created":"2020-09-04 10:20:59","_id":"z8uve9ZmLL5zgRux"}
+{"title":"This is another test list","userId":"pxYJ4R2oNFZ0FbIc","created":"2020-09-04 10:20:59","_id":"4B2Htk1E3yw1jrSs"}
+{"title":"This is another test list","userId":"pxYJ4R2oNFZ0FbIc","created":"2020-09-04 10:20:59","_id":"8Dn9b2ExKqFMuLPI"}
+{"title":"This is another test list","userId":"pxYJ4R2oNFZ0FbIc","created":"2020-09-04 10:20:59","_id":"7bDjLHoamqWowBFf"}
+{"title":"This is another test list","userId":"pxYJ4R2oNFZ0FbIc","created":"2020-09-04 10:20:59","_id":"b2g6bQC0KLSIFz1k"}
+{"title":"This is another test list","userId":"pxYJ4R2oNFZ0FbIc","created":"2020-09-04 10:20:59","_id":"RgxrkLFY7cRpLJig"}
+{"title":"This is another test list","userId":"pxYJ4R2oNFZ0FbIc","created":"2020-09-04 10:20:59","_id":"ZD20qanHVOVnnxIk"}
+{"title":"This is another test list","userId":"pxYJ4R2oNFZ0FbIc","created":"2020-09-04 10:20:59","_id":"eHDYO0wfKHGbWZsG"}
+{"$$deleted":true,"_id":"0ZAZlKJaRmCBSkVz"}
+{"$$deleted":true,"_id":"4B2Htk1E3yw1jrSs"}
+{"$$deleted":true,"_id":"7bDjLHoamqWowBFf"}
+{"$$deleted":true,"_id":"8Dn9b2ExKqFMuLPI"}
+{"$$deleted":true,"_id":"KW4u36Ij8z0f3dnU"}
+{"$$deleted":true,"_id":"RgxrkLFY7cRpLJig"}
+{"$$deleted":true,"_id":"ZD20qanHVOVnnxIk"}
+{"$$deleted":true,"_id":"b2g6bQC0KLSIFz1k"}
+{"$$deleted":true,"_id":"eHDYO0wfKHGbWZsG"}
+{"$$deleted":true,"_id":"z8uve9ZmLL5zgRux"}
+{"title":"This is a test list","userId":"Mr5gqmugIk30AzVH","created":"2020-09-04 10:21:00","_id":"XsjCLwvyYzl7lRQd"}
+{"title":"This is also a test list","userId":"Mr5gqmugIk30AzVH","created":"2020-09-04 10:21:00","_id":"T0AVANVFJEZJer90"}
+{"$$deleted":true,"_id":"T0AVANVFJEZJer90"}
+{"$$deleted":true,"_id":"XsjCLwvyYzl7lRQd"}
+{"title":"This is a test list","userId":"JEEo5AAQWeV5ornd","created":"2020-09-04 10:21:00","_id":"JgWrzwTLxreEGx8q"}
+{"$$deleted":true,"_id":"JgWrzwTLxreEGx8q"}
+{"title":"This is a test list","userId":"ijfMW9WpnSfFibCX","created":"2020-09-04 10:21:00","_id":"pAqccdPKmqzyBN91"}
+{"$$deleted":true,"_id":"pAqccdPKmqzyBN91"}
+{"title":"This is a test list","userId":"hhHEtGsjBqKQ68cL","created":"2020-09-04 10:21:00","_id":"kAD2JXHvsX3Z7cer"}
+{"title":"Updated list title","userId":"hhHEtGsjBqKQ68cL","created":"2020-09-04 10:21:00","_id":"kAD2JXHvsX3Z7cer","updated":"2020-09-04 10:21:00"}
+{"$$deleted":true,"_id":"kAD2JXHvsX3Z7cer"}
+{"title":"This is a test list","userId":"U3LuUYEB4hwkgYPU","created":"2020-09-04 10:21:00","_id":"b5YX3u1SmCySW0fx"}
+{"$$deleted":true,"_id":"b5YX3u1SmCySW0fx"}

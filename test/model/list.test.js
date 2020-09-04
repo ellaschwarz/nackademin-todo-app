@@ -14,7 +14,7 @@ describe("Testing the list model", () => {
     this.currentTest.userId = user._id;
 
     let title = "This is a test list";
-    let userId = this.test.userId;
+    let userId = this.currentTest.userId;
     const list = await listModel.insertList(title, userId);
     this.currentTest.list = list;
     this.currentTest.listId = list._id;

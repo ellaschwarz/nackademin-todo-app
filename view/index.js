@@ -92,8 +92,6 @@ const bearer = 'Bearer ' + token;
       done: false
     };
 
-    console.log(token);
-
     let response = await fetch("http://127.0.0.1:3000/todos", {
       method: "POST",
 

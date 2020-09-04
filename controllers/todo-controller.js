@@ -64,15 +64,12 @@ const deleteTodoItem = async (req, res) => {
     try {
         if(req.user.role === 'admin') {
             const todo = await removeTodo(todoID);
-            console.log('Går in i controllern remove todo');
-            console.log(todo);
             return res.status(200).json(todo);
         } else {
             throw new Error('Not authorized to delete');
         }
 
     } catch (err) {
-        console.log('Skickar 404');
         return res.status(401).json(err);
     };
 };
