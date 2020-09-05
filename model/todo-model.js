@@ -23,6 +23,7 @@ const findNextTodos = async (filter, perPage, page) => {
 };
 
 const insertTodo = async (title, done, userId, listId) => {
+	console.log('INSERT TODO')
 	const doc = await todoDB.insert({
 		title,
 		done,

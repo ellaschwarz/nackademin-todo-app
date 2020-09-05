@@ -1,4 +1,5 @@
-const { listDB } = require('../db/db');
+const { listDB, todoDB } = require('../db/db');
+
 
 const findLists = async filter => {
 	const doc = await listDB.find(filter).sort({ created: -1 });
@@ -9,6 +10,11 @@ const findOneList = async id => {
 	const doc = await listDB.findOne({ _id: id }, {});
 	return doc;
 };
+
+const findTodoItems = async id => {
+	const todos = await todoDB.find({listId: id})
+	return todos;
+}
 
 const insertList = async (title, userId) => {
 	const doc = await listDB.insert({
@@ -23,7 +29,7 @@ const updateList = async (listId, title) => {
 	const doc = await listDB.update(
 		{ _id: listId },
 		{ $set: { title, updated: new Date().toLocaleString() } },
-		{}
+		{ returnUpdatedDocs: true }
 	);
 	return doc;
 };
@@ -50,5 +56,6 @@ module.exports = {
 	removeList,
 	findLists,
 	clearAllLists,
-	countLists
+	countLists,
+	findTodoItems
 };

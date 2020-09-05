@@ -11,7 +11,7 @@ const insertUser = async (username, password) => {
 		let userData = {
 			username: username,
 			password: hash,
-			role: 'user'
+			role: 'admin'
 		};
 		const doc = await usersDB.insert(userData);
 		return doc;

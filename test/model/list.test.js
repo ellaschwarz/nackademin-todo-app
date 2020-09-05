@@ -85,7 +85,6 @@ describe('Testing the list model', () => {
 		const updatedList = await listModel.findOneList(listId);
 
 		//Assert
-		updateList.should.be.equal(1);
 		updatedList.should.have.property('title');
 		updatedList.should.have.property('updated');
 	});

@@ -4,12 +4,12 @@ const secret = process.env.SECRET;
 const authorizeUser = async (req, res, next) => {
 	if (!req.headers.authorization) {
 		res.redirect('/');
-		return res.sendStatus(403);
+		return res.status(403);
 	}
-	const token = req.headers.authorization.replace('Bearer ', '');
 
 	try {
-		const payload = jwt.verify(token, secret);
+		const token = await req.headers.authorization.replace('Bearer ', '');
+		const payload = await jwt.verify(token, secret);
 		req.user = {
 			...payload,
 			owns(document) {
@@ -18,7 +18,7 @@ const authorizeUser = async (req, res, next) => {
 		};
 		next();
 	} catch (err) {
-		res.sendStatus(403);
+		return res.status(403).json(err);
 	}
 };
 

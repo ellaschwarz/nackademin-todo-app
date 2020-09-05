@@ -18,7 +18,7 @@ router.get('/', authorizeUser, List.readLists);
 router.get('/:id', authorizeUser, List.readOneList)
 
 //Reading one list with all items
-router.get('/:id/todos', List.getListItems)
+router.get('/:id/todos', authorizeUser, List.getListItems)
 
 //Updating Lists
 router.patch('/:id', authorizeUser, List.updateTodoList);
