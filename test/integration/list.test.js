@@ -47,7 +47,6 @@ describe('RESTful resource test for lists', () => {
 			.end((err, res) => {
 				expect(res).to.have.status(200);
 				expect(res).to.be.json;
-				//expect(res.body).to.have.keys(['title', 'userId', 'created', '_id']);
 			});
 	});
 
@@ -59,13 +58,6 @@ describe('RESTful resource test for lists', () => {
 			.end((err, res) => {
 				expect(res).to.have.status(200);
 				expect(res).to.be.json;
-				// expect(res.body).to.deep.an('array');
-				// expect(res.body[0]).to.have.all.keys(
-				// 	'_id',
-				// 	'created',
-				// 	'title',
-				// 	'userId'
-				// );
 			});
 	});
 	it('should read one list', async function() {
@@ -76,21 +68,16 @@ describe('RESTful resource test for lists', () => {
 			.end((err, res) => {
 				expect(res).to.have.status(200);
 				expect(res).to.be.json;
-				// expect(res.body).to.deep.an('object');
-				// expect(res.body).to.have.all.keys('_id', 'created', 'title', 'userId');
+				expect(res.body).to.deep.an('object');
 			});
 	});
 	it('should read one list and return its todo items', async function() {
-		//let listId = this.test.listId;
-		//let userId = this.test.userId;
 
 		await todoModel.insertTodo(
 			'Todo item1 in todo list',
 			'done',
 			this.test.userId,
-			this.test.listId,
-			//userId,
-			//listId
+			this.test.listId
 		);
 		await todoModel.insertTodo(
 			'Todo item2 in todo list',
@@ -115,7 +102,6 @@ describe('RESTful resource test for lists', () => {
 			});
 	});
 	it('should update the title of a list', async function() {
-		//let listId = this.test.listId;
 		const body = {
 			title: 'This is a new list title'
 		};
@@ -128,26 +114,15 @@ describe('RESTful resource test for lists', () => {
 			.end((err, res) => {
 				expect(res).to.have.status(200);
 				expect(res).to.be.json;
-				// expect(res.body).to.have.keys(
-				// 	'_id',
-				// 	'created',
-				// 	'title',
-				// 	'userId',
-				// 	'updated'
-				// );
 			});
-			
 	});
-	it('should delete one list', async function () {
-		//let listId = this.test.listId;
-		console.log(this.test.listId + 'from delete')
+	it('should delete one list', async function() {
 		request(app)
 			.delete(`/lists/${this.test.listId}`)
 			.set('Authorization', `Bearer ${this.test.token}`)
 			.set('Content-Type', 'application/json')
 			.end((err, res) => {
 				expect(res).to.have.status(200);
-			})
-
-	})
+			});
+	});
 });

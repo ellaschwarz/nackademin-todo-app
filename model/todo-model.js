@@ -45,8 +45,18 @@ const updateTodo = async (todoId, title, done) => {
 
 const removeTodo = async todoId => {
 	const doc = await todoDB.remove({ _id: todoId });
+	console.log(doc);
 	return doc;
-	// res.sendStatus(200).send(doc);
+};
+
+const clearAllTodos = async () => {
+	const doc = await todoDB.remove({}, { multi: true });
+	return doc;
+};
+
+const countTodos = async () => {
+	const doc = await todoDB.count({});
+	return doc;
 };
 
 module.exports = {
@@ -55,5 +65,7 @@ module.exports = {
 	updateTodo,
 	removeTodo,
 	findNextTodos,
-	findOneTodo
+	findOneTodo,
+	clearAllTodos,
+	countTodos
 };

@@ -54,7 +54,6 @@ describe('Testing the list model', () => {
 	});
 
 	it('should find all lists in database', async function() {
-		//Arrange
 
 		//Act
 		let allLists = await listModel.findLists({});

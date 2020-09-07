@@ -23,10 +23,8 @@ const readLists = async (req, res) => {
 
 const getListItems = async (req, res) => {
 	try {
-		console.log('CONTROLLEEEER')
 		const listId = req.params.id;
 		let todoItems = await findTodoItems(listId);
-		//console.log(todoItems)
 		return res.status(200).json(todoItems);
 	} catch (err) {
 		return res.status(404).json(err);
@@ -35,7 +33,6 @@ const getListItems = async (req, res) => {
 
 const readOneList = async (req, res) => {
 	try {
-		console.log('Går in i read list')
 		const list = await findOneList(req.params.id);
 		return res.status(200).json(list);
 	} catch (err) {
@@ -65,18 +62,16 @@ const updateTodoList = async (req, res) => {
 			throw new Error('Not authorized to edit');
 		}
 	} catch (err) {
-		console.log('catching what')
 		return res.status(404).json(err);
 	}
 };
 
 const deleteTodoList = async (req, res) => {
 	const listId = req.params.id;
-	console.log(listId)
 	try {
+		const list = await findOneList(listId);
 		if (req.user.id === list.userId || req.user.role === 'admin') {
 			const list = await removeList(listId);
-			console.log(list);
 			return res.status(200).json(list);
 		} else {
 			throw new Error('Not authorized to delete');
