@@ -36,6 +36,7 @@ const updateList = async (listId, title) => {
 
 const removeList = async listId => {
 	const doc = await listDB.remove({ _id: listId });
+	const todo = await todoDB.remove({listId: listId}, { multi: true })
 	return doc;
 };
 

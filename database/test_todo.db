@@ -1,39 +1,41 @@
-{"title":"Todo item1 in todo list","done":"done","userId":"mcx0M6OpgvhKO5LQ","listId":"QLcC03VPjvGZz63h","created":"2020-09-05 17:15:49","_id":"W6KjfI3x12O7DyXi"}
-{"title":"Todo item2 in todo list","done":"done","userId":"mcx0M6OpgvhKO5LQ","listId":"QLcC03VPjvGZz63h","created":"2020-09-05 17:15:49","_id":"i96bTcYGufL1dvfM"}
-{"title":"Todo item3 in todo list","done":"done","userId":"mcx0M6OpgvhKO5LQ","listId":"QLcC03VPjvGZz63h","created":"2020-09-05 17:15:49","_id":"dklC478sfDa0R8ku"}
-{"$$deleted":true,"_id":"W6KjfI3x12O7DyXi"}
-{"$$deleted":true,"_id":"dklC478sfDa0R8ku"}
-{"$$deleted":true,"_id":"i96bTcYGufL1dvfM"}
-{"title":"This is a test todo item","done":"done","userId":"CXTM2hlCR06GUcdz","listId":"GWkDthpnvKUBXDFp","created":"2020-09-05 17:15:50","_id":"pT9oXtMFZ7ip4fKG"}
-{"title":"This is another test todo","done":"CXTM2hlCR06GUcdz","created":"2020-09-05 17:15:50","_id":"vfjbbpiKcvqOtNvK"}
-{"title":"This is another test todo","done":"CXTM2hlCR06GUcdz","created":"2020-09-05 17:15:50","_id":"nsC6E2x05mgpnQqK"}
-{"title":"This is another test todo","done":"CXTM2hlCR06GUcdz","created":"2020-09-05 17:15:50","_id":"RD10FWXip3Jxs8HI"}
-{"title":"This is another test todo","done":"CXTM2hlCR06GUcdz","created":"2020-09-05 17:15:50","_id":"cvYVS52mA6rBCuoB"}
-{"title":"This is another test todo","done":"CXTM2hlCR06GUcdz","created":"2020-09-05 17:15:50","_id":"mO7vKydhxlR1kebT"}
-{"title":"This is another test todo","done":"CXTM2hlCR06GUcdz","created":"2020-09-05 17:15:50","_id":"CTPJ2Cmqgvee8iC8"}
-{"title":"This is another test todo","done":"CXTM2hlCR06GUcdz","created":"2020-09-05 17:15:50","_id":"9SrnFz2i6SlSI65F"}
-{"title":"This is another test todo","done":"CXTM2hlCR06GUcdz","created":"2020-09-05 17:15:50","_id":"jSprnyTlJI1NgjRx"}
-{"title":"This is another test todo","done":"CXTM2hlCR06GUcdz","created":"2020-09-05 17:15:50","_id":"w3m9wa7TnizRBQ7g"}
-{"$$deleted":true,"_id":"9SrnFz2i6SlSI65F"}
-{"$$deleted":true,"_id":"CTPJ2Cmqgvee8iC8"}
-{"$$deleted":true,"_id":"RD10FWXip3Jxs8HI"}
-{"$$deleted":true,"_id":"cvYVS52mA6rBCuoB"}
-{"$$deleted":true,"_id":"jSprnyTlJI1NgjRx"}
-{"$$deleted":true,"_id":"mO7vKydhxlR1kebT"}
-{"$$deleted":true,"_id":"nsC6E2x05mgpnQqK"}
-{"$$deleted":true,"_id":"pT9oXtMFZ7ip4fKG"}
-{"$$deleted":true,"_id":"vfjbbpiKcvqOtNvK"}
-{"$$deleted":true,"_id":"w3m9wa7TnizRBQ7g"}
-{"title":"This is a test todo item","done":"done","userId":"Sjwi5z7BhpkcRBav","listId":"TH7gEbwsjX4TmnEj","created":"2020-09-05 17:15:50","_id":"aSpc95uuxOFvwDau"}
-{"title":"This is also a test todo","done":"done","userId":"Sjwi5z7BhpkcRBav","listId":"TH7gEbwsjX4TmnEj","created":"2020-09-05 17:15:50","_id":"K5mufB7naBO0JTHo"}
-{"$$deleted":true,"_id":"K5mufB7naBO0JTHo"}
-{"$$deleted":true,"_id":"aSpc95uuxOFvwDau"}
-{"title":"This is a test todo item","done":"done","userId":"MP9j6nvnUsm9R5dS","listId":"dtiLMIu94Y7Hyifm","created":"2020-09-05 17:15:51","_id":"Iq4Bso7rhwqZEbza"}
-{"$$deleted":true,"_id":"Iq4Bso7rhwqZEbza"}
-{"title":"This is a test todo item","done":"done","userId":"rqOIEUqOdDQZ9Xfz","listId":"fVgmfaVHtIVJ9XQ5","created":"2020-09-05 17:15:51","_id":"IbYiapD6TGaLUPO1"}
-{"$$deleted":true,"_id":"IbYiapD6TGaLUPO1"}
-{"title":"This is a test todo item","done":"done","userId":"Ny5pdxiWYsjN9fio","listId":"VI3Jj8woo1p2chAA","created":"2020-09-05 17:15:51","_id":"bRiISO88T0UFbFhP"}
-{"title":"Updated todo title","done":"done","userId":"Ny5pdxiWYsjN9fio","listId":"VI3Jj8woo1p2chAA","created":"2020-09-05 17:15:51","_id":"bRiISO88T0UFbFhP","updated":"2020-09-05 17:15:51"}
-{"$$deleted":true,"_id":"bRiISO88T0UFbFhP"}
-{"title":"This is a test todo item","done":"done","userId":"UFVam8ba1Cp4Sap1","listId":"KvAlnElh52fPKhip","created":"2020-09-05 17:15:51","_id":"fmSwK8tNhendnRqM"}
-{"$$deleted":true,"_id":"fmSwK8tNhendnRqM"}
+{"title":"Todo item1 in todo list","done":"done","userId":"dx22DkUwBJL0L4GJ","listId":"8mHA5IED0JXZFHbA","created":"2020-09-07 11:29:34","_id":"MkqaJlKtr96WlzgK"}
+{"title":"Todo item2 in todo list","done":"done","userId":"dx22DkUwBJL0L4GJ","listId":"8mHA5IED0JXZFHbA","created":"2020-09-07 11:29:34","_id":"ZotectDFwlPHUGPf"}
+{"title":"Todo item3 in todo list","done":"done","userId":"dx22DkUwBJL0L4GJ","listId":"8mHA5IED0JXZFHbA","created":"2020-09-07 11:29:34","_id":"nRicVS4A1uW5yxjy"}
+{"title":"Todo item1 in todo list","done":"done","userId":"unmVdz815iMhvXIu","listId":"taFSnDLE8pBs2bpY","created":"2020-09-07 11:29:35","_id":"7o1dPuv5s6mYmw22"}
+{"$$deleted":true,"_id":"7o1dPuv5s6mYmw22"}
+{"$$deleted":true,"_id":"MkqaJlKtr96WlzgK"}
+{"$$deleted":true,"_id":"ZotectDFwlPHUGPf"}
+{"$$deleted":true,"_id":"nRicVS4A1uW5yxjy"}
+{"title":"This is a test todo item","done":"done","userId":"jN5i5ff7EdKU4QJ3","listId":"l5Fr6K6idlVPkIvl","created":"2020-09-07 11:29:35","_id":"mSWS90jgzQKqp70u"}
+{"title":"This is another test todo","done":"jN5i5ff7EdKU4QJ3","created":"2020-09-07 11:29:35","_id":"xL9WxTXojpmLphlG"}
+{"title":"This is another test todo","done":"jN5i5ff7EdKU4QJ3","created":"2020-09-07 11:29:35","_id":"Ton5U4RAd4Sd2XEF"}
+{"title":"This is another test todo","done":"jN5i5ff7EdKU4QJ3","created":"2020-09-07 11:29:35","_id":"sCMWjXSSs3JFSKYh"}
+{"title":"This is another test todo","done":"jN5i5ff7EdKU4QJ3","created":"2020-09-07 11:29:35","_id":"dV03cm6ddMi0Nrwv"}
+{"title":"This is another test todo","done":"jN5i5ff7EdKU4QJ3","created":"2020-09-07 11:29:35","_id":"mXsQyQXXQHmMDVtT"}
+{"title":"This is another test todo","done":"jN5i5ff7EdKU4QJ3","created":"2020-09-07 11:29:35","_id":"6xqUiilnoTBZMVQF"}
+{"title":"This is another test todo","done":"jN5i5ff7EdKU4QJ3","created":"2020-09-07 11:29:35","_id":"Qg0xhFQU5eNnQRpP"}
+{"title":"This is another test todo","done":"jN5i5ff7EdKU4QJ3","created":"2020-09-07 11:29:35","_id":"uXT86jal2rXjp0pi"}
+{"title":"This is another test todo","done":"jN5i5ff7EdKU4QJ3","created":"2020-09-07 11:29:35","_id":"SyXoJjZNJTqLYoiO"}
+{"$$deleted":true,"_id":"6xqUiilnoTBZMVQF"}
+{"$$deleted":true,"_id":"Qg0xhFQU5eNnQRpP"}
+{"$$deleted":true,"_id":"SyXoJjZNJTqLYoiO"}
+{"$$deleted":true,"_id":"Ton5U4RAd4Sd2XEF"}
+{"$$deleted":true,"_id":"dV03cm6ddMi0Nrwv"}
+{"$$deleted":true,"_id":"mSWS90jgzQKqp70u"}
+{"$$deleted":true,"_id":"mXsQyQXXQHmMDVtT"}
+{"$$deleted":true,"_id":"sCMWjXSSs3JFSKYh"}
+{"$$deleted":true,"_id":"uXT86jal2rXjp0pi"}
+{"$$deleted":true,"_id":"xL9WxTXojpmLphlG"}
+{"title":"This is a test todo item","done":"done","userId":"jPmc7zi7lddMAJkN","listId":"IPPir6M6kUcuLp51","created":"2020-09-07 11:29:35","_id":"c3eQSxyRlzaIK17e"}
+{"title":"This is also a test todo","done":"done","userId":"jPmc7zi7lddMAJkN","listId":"IPPir6M6kUcuLp51","created":"2020-09-07 11:29:35","_id":"ht3d1Zg3uQC8v36j"}
+{"$$deleted":true,"_id":"c3eQSxyRlzaIK17e"}
+{"$$deleted":true,"_id":"ht3d1Zg3uQC8v36j"}
+{"title":"This is a test todo item","done":"done","userId":"7ANFsQtXxEZ1XI8B","listId":"QT9eZlA25H0iUQDL","created":"2020-09-07 11:29:35","_id":"qKSWytajZM62rUuU"}
+{"$$deleted":true,"_id":"qKSWytajZM62rUuU"}
+{"title":"This is a test todo item","done":"done","userId":"8IHqvRDa6FK2UGH6","listId":"ELTVJmHdjuyeKj4L","created":"2020-09-07 11:29:35","_id":"rkU8FiMeUTE4pyE7"}
+{"$$deleted":true,"_id":"rkU8FiMeUTE4pyE7"}
+{"title":"This is a test todo item","done":"done","userId":"sRsKo1qDsEciaGke","listId":"BN20GwPIQwzyULFQ","created":"2020-09-07 11:29:35","_id":"NUk9MZOtOxMFjQB2"}
+{"title":"Updated todo title","done":"done","userId":"sRsKo1qDsEciaGke","listId":"BN20GwPIQwzyULFQ","created":"2020-09-07 11:29:35","_id":"NUk9MZOtOxMFjQB2","updated":"2020-09-07 11:29:35"}
+{"$$deleted":true,"_id":"NUk9MZOtOxMFjQB2"}
+{"title":"This is a test todo item","done":"done","userId":"mAiiS7Qt14nZ1eFs","listId":"kSZEFabAgu0QaUuT","created":"2020-09-07 11:29:36","_id":"n22n010XVgonFMnF"}
+{"$$deleted":true,"_id":"n22n010XVgonFMnF"}

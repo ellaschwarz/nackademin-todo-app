@@ -1,65 +1,65 @@
-{"title":"This is a test list","userId":"hevokyKbr3OfNPSG","created":"2020-09-05 17:15:27","_id":"7YsjMO5jNcrUFLi4"}
-{"title":"This is a test list","userId":"XLVLsgT9CTYOkger","created":"2020-09-05 17:15:26","_id":"8WCUYND7k4iRb4Rb"}
-{"title":"This is a test list","userId":"BWG13GX3CKmuuQTK","created":"2020-09-05 17:15:27","_id":"aT2d9bprCZDWtf2v"}
-{"title":"This is a test list","userId":"4CwAmtgq4WfxGrwg","created":"2020-09-05 17:15:26","_id":"eCDG4R6plKaBXtuo"}
-{"title":"This is a test list","userId":"MqqQnGku96XDOYm3","created":"2020-09-05 17:15:26","_id":"fEIZp9lO9sCqGZoI"}
-{"title":"This is a test list","userId":"zq2hkt9NL0ZflXFY","created":"2020-09-05 17:15:27","_id":"sKrHtBOujeXLKLD4"}
-{"$$deleted":true,"_id":"7YsjMO5jNcrUFLi4"}
-{"$$deleted":true,"_id":"8WCUYND7k4iRb4Rb"}
-{"$$deleted":true,"_id":"aT2d9bprCZDWtf2v"}
-{"$$deleted":true,"_id":"eCDG4R6plKaBXtuo"}
-{"$$deleted":true,"_id":"fEIZp9lO9sCqGZoI"}
-{"$$deleted":true,"_id":"sKrHtBOujeXLKLD4"}
-{"title":"This is a test list","userId":"RsHArIsCOgb8Dn9x","created":"2020-09-05 17:15:48","_id":"Uo91uwP3Xl94KFZC"}
-{"title":"This is a new list from HTTP-request","userId":"RsHArIsCOgb8Dn9x","created":"2020-09-05 17:15:48","_id":"qAwLLMPpWjg9kSO9"}
-{"$$deleted":true,"_id":"Uo91uwP3Xl94KFZC"}
-{"$$deleted":true,"_id":"qAwLLMPpWjg9kSO9"}
-{"title":"This is a test list","userId":"I76TkkrG0ZsKR7g2","created":"2020-09-05 17:15:49","_id":"a1CNM3k1NstN0ZBw"}
-{"$$deleted":true,"_id":"a1CNM3k1NstN0ZBw"}
-{"title":"This is a test list","userId":"0rd4h2z8Fy0NMurS","created":"2020-09-05 17:15:49","_id":"UkfFLvDC4OmtPo86"}
-{"$$deleted":true,"_id":"UkfFLvDC4OmtPo86"}
-{"title":"This is a test list","userId":"mcx0M6OpgvhKO5LQ","created":"2020-09-05 17:15:49","_id":"QLcC03VPjvGZz63h"}
-{"$$deleted":true,"_id":"QLcC03VPjvGZz63h"}
-{"title":"This is a test list","userId":"byXuJVGqmMsFDcWa","created":"2020-09-05 17:15:49","_id":"0OLipBIFrh5oeBxy"}
-{"$$deleted":true,"_id":"0OLipBIFrh5oeBxy"}
-{"title":"This is a test list","userId":"rFmmzyFavl8xuIId","created":"2020-09-05 17:15:50","_id":"IuUqu9RAcRKsVYiu"}
-{"$$deleted":true,"_id":"IuUqu9RAcRKsVYiu"}
-{"title":"This is a test list","userId":"AbnoOfH5FoMM40A8","created":"2020-09-05 17:15:50","_id":"ldbrK5D8648ijcXv"}
-{"title":"This is another test list","userId":"AbnoOfH5FoMM40A8","created":"2020-09-05 17:15:50","_id":"m22bclyjoAzhc2HF"}
-{"title":"This is another test list","userId":"AbnoOfH5FoMM40A8","created":"2020-09-05 17:15:50","_id":"TJPGp3cQPfzRjfSN"}
-{"title":"This is another test list","userId":"AbnoOfH5FoMM40A8","created":"2020-09-05 17:15:50","_id":"JalFWtFT13Sd0BrK"}
-{"title":"This is another test list","userId":"AbnoOfH5FoMM40A8","created":"2020-09-05 17:15:50","_id":"Gs5JZZ64ilXTUJlE"}
-{"title":"This is another test list","userId":"AbnoOfH5FoMM40A8","created":"2020-09-05 17:15:50","_id":"VP6yth5f68GbBJfJ"}
-{"title":"This is another test list","userId":"AbnoOfH5FoMM40A8","created":"2020-09-05 17:15:50","_id":"1rXAhzWYJAPFxrLM"}
-{"title":"This is another test list","userId":"AbnoOfH5FoMM40A8","created":"2020-09-05 17:15:50","_id":"p5b7NMoChEZor19N"}
-{"title":"This is another test list","userId":"AbnoOfH5FoMM40A8","created":"2020-09-05 17:15:50","_id":"oKP7jsT0R5DT3NC7"}
-{"title":"This is another test list","userId":"AbnoOfH5FoMM40A8","created":"2020-09-05 17:15:50","_id":"sLjJHSJsASnB7LT2"}
-{"$$deleted":true,"_id":"1rXAhzWYJAPFxrLM"}
-{"$$deleted":true,"_id":"Gs5JZZ64ilXTUJlE"}
-{"$$deleted":true,"_id":"JalFWtFT13Sd0BrK"}
-{"$$deleted":true,"_id":"TJPGp3cQPfzRjfSN"}
-{"$$deleted":true,"_id":"VP6yth5f68GbBJfJ"}
-{"$$deleted":true,"_id":"ldbrK5D8648ijcXv"}
-{"$$deleted":true,"_id":"m22bclyjoAzhc2HF"}
-{"$$deleted":true,"_id":"oKP7jsT0R5DT3NC7"}
-{"$$deleted":true,"_id":"p5b7NMoChEZor19N"}
-{"$$deleted":true,"_id":"sLjJHSJsASnB7LT2"}
-{"title":"This is a test list","userId":"RlNQCyw7uuky8E9T","created":"2020-09-05 17:15:50","_id":"UY3wFFq4L3rPUQsi"}
-{"title":"This is also a test list","userId":"RlNQCyw7uuky8E9T","created":"2020-09-05 17:15:50","_id":"vSWlnWxoHMa0pVIU"}
-{"$$deleted":true,"_id":"UY3wFFq4L3rPUQsi"}
-{"$$deleted":true,"_id":"vSWlnWxoHMa0pVIU"}
-{"title":"This is a test list","userId":"6FgtcvqNDEgYmbBm","created":"2020-09-05 17:15:50","_id":"l0iaH3fEv3ozoYv1"}
-{"$$deleted":true,"_id":"l0iaH3fEv3ozoYv1"}
-{"title":"This is a test list","userId":"G7xBC0sYwCBviSL6","created":"2020-09-05 17:15:50","_id":"XDeKZU7AL6y1yTdw"}
-{"$$deleted":true,"_id":"XDeKZU7AL6y1yTdw"}
-{"title":"This is a test list","userId":"eY3qHLoY2GMZlHwT","created":"2020-09-05 17:15:50","_id":"U3hyIrbOhbXIRZaE"}
-{"title":"Updated list title","userId":"eY3qHLoY2GMZlHwT","created":"2020-09-05 17:15:50","_id":"U3hyIrbOhbXIRZaE","updated":"2020-09-05 17:15:50"}
-{"$$deleted":true,"_id":"U3hyIrbOhbXIRZaE"}
-{"title":"This is a test list","userId":"BU0DAGnAt87VlkNh","created":"2020-09-05 17:15:50","_id":"7GmgbfdTnuNWFU20"}
-{"$$deleted":true,"_id":"7GmgbfdTnuNWFU20"}
-{"title":"This is a test list","userId":"CXTM2hlCR06GUcdz","created":"2020-09-05 17:15:50","_id":"GWkDthpnvKUBXDFp"}
-{"title":"This is a test list","userId":"Sjwi5z7BhpkcRBav","created":"2020-09-05 17:15:50","_id":"TH7gEbwsjX4TmnEj"}
-{"title":"This is a test list","userId":"MP9j6nvnUsm9R5dS","created":"2020-09-05 17:15:51","_id":"dtiLMIu94Y7Hyifm"}
-{"title":"This is a test list","userId":"rqOIEUqOdDQZ9Xfz","created":"2020-09-05 17:15:51","_id":"fVgmfaVHtIVJ9XQ5"}
-{"title":"This is a test list","userId":"Ny5pdxiWYsjN9fio","created":"2020-09-05 17:15:51","_id":"VI3Jj8woo1p2chAA"}
-{"title":"This is a test list","userId":"UFVam8ba1Cp4Sap1","created":"2020-09-05 17:15:51","_id":"KvAlnElh52fPKhip"}
+{"title":"This is a test list","userId":"q4LNa5MBJTrGZTY8","created":"2020-09-07 11:29:19","_id":"0UGPrJHKrbBtogA1"}
+{"title":"This is a test list","userId":"yVVC3ZJo2TYSv4uM","created":"2020-09-07 11:29:20","_id":"3ndq5kdiuMSrLSHw"}
+{"title":"This is a test list","userId":"IEC6InAY7FvUGZ3K","created":"2020-09-07 11:29:19","_id":"AG4Lf1DpgA65ciRZ"}
+{"title":"This is a test list","userId":"ukapLLeJZwPT0Y6r","created":"2020-09-07 11:29:20","_id":"BF9XRCDOAdvvmetB"}
+{"title":"This is a test list","userId":"7HH6YbM8ajcfynto","created":"2020-09-07 11:29:19","_id":"SzopAi02GPymnqyl"}
+{"title":"This is a test list","userId":"4WCgu5d23Nx12nlQ","created":"2020-09-07 11:29:19","_id":"bt6ojU4tXDSlMn99"}
+{"$$deleted":true,"_id":"0UGPrJHKrbBtogA1"}
+{"$$deleted":true,"_id":"3ndq5kdiuMSrLSHw"}
+{"$$deleted":true,"_id":"AG4Lf1DpgA65ciRZ"}
+{"$$deleted":true,"_id":"BF9XRCDOAdvvmetB"}
+{"$$deleted":true,"_id":"SzopAi02GPymnqyl"}
+{"$$deleted":true,"_id":"bt6ojU4tXDSlMn99"}
+{"title":"This is a test list","userId":"fjUTJLaG5DhcCkUB","created":"2020-09-07 11:29:33","_id":"DUa83FZeHgCq8QRF"}
+{"title":"This is a new list from HTTP-request","userId":"fjUTJLaG5DhcCkUB","created":"2020-09-07 11:29:33","_id":"p4Sv615Gf9RrzKGV"}
+{"$$deleted":true,"_id":"DUa83FZeHgCq8QRF"}
+{"$$deleted":true,"_id":"p4Sv615Gf9RrzKGV"}
+{"title":"This is a test list","userId":"19dH2tTucGhmQtIn","created":"2020-09-07 11:29:33","_id":"wUBly2U7QXl3warP"}
+{"$$deleted":true,"_id":"wUBly2U7QXl3warP"}
+{"title":"This is a test list","userId":"hBGK6FhOam77MvZY","created":"2020-09-07 11:29:33","_id":"0YmiGiG7C1RWq8Jw"}
+{"$$deleted":true,"_id":"0YmiGiG7C1RWq8Jw"}
+{"title":"This is a test list","userId":"dx22DkUwBJL0L4GJ","created":"2020-09-07 11:29:34","_id":"8mHA5IED0JXZFHbA"}
+{"$$deleted":true,"_id":"8mHA5IED0JXZFHbA"}
+{"title":"This is a test list","userId":"nSAU4sfdvJUrL126","created":"2020-09-07 11:29:34","_id":"o0RUaHjxse1AGvq9"}
+{"$$deleted":true,"_id":"o0RUaHjxse1AGvq9"}
+{"title":"This is a test list","userId":"bnTRUWzgUlZTUDOl","created":"2020-09-07 11:29:34","_id":"eG0Yj5FjSnnUHRXX"}
+{"$$deleted":true,"_id":"eG0Yj5FjSnnUHRXX"}
+{"title":"This is a test list","userId":"TA2sK2WwhPdrzuPY","created":"2020-09-07 11:29:34","_id":"dLSyavqaHyULWWtq"}
+{"title":"This is another test list","userId":"TA2sK2WwhPdrzuPY","created":"2020-09-07 11:29:34","_id":"np5yHzlydPcznLYn"}
+{"title":"This is another test list","userId":"TA2sK2WwhPdrzuPY","created":"2020-09-07 11:29:34","_id":"8rgV7uXBNXyGstuV"}
+{"title":"This is another test list","userId":"TA2sK2WwhPdrzuPY","created":"2020-09-07 11:29:34","_id":"rV1k6z87k7PMwTtU"}
+{"title":"This is another test list","userId":"TA2sK2WwhPdrzuPY","created":"2020-09-07 11:29:34","_id":"BJ9jDZshhKaKsUEt"}
+{"title":"This is another test list","userId":"TA2sK2WwhPdrzuPY","created":"2020-09-07 11:29:34","_id":"UBcva7aNeVi5O1TR"}
+{"title":"This is another test list","userId":"TA2sK2WwhPdrzuPY","created":"2020-09-07 11:29:34","_id":"bkMNYsu7ysTBOjev"}
+{"title":"This is another test list","userId":"TA2sK2WwhPdrzuPY","created":"2020-09-07 11:29:34","_id":"YUpGWGJEFJisHb5X"}
+{"title":"This is another test list","userId":"TA2sK2WwhPdrzuPY","created":"2020-09-07 11:29:34","_id":"z5lPeYNyoaiSnXRv"}
+{"title":"This is another test list","userId":"TA2sK2WwhPdrzuPY","created":"2020-09-07 11:29:34","_id":"ryfTuDNYiCpNCJOP"}
+{"$$deleted":true,"_id":"8rgV7uXBNXyGstuV"}
+{"$$deleted":true,"_id":"BJ9jDZshhKaKsUEt"}
+{"$$deleted":true,"_id":"UBcva7aNeVi5O1TR"}
+{"$$deleted":true,"_id":"YUpGWGJEFJisHb5X"}
+{"$$deleted":true,"_id":"bkMNYsu7ysTBOjev"}
+{"$$deleted":true,"_id":"dLSyavqaHyULWWtq"}
+{"$$deleted":true,"_id":"np5yHzlydPcznLYn"}
+{"$$deleted":true,"_id":"rV1k6z87k7PMwTtU"}
+{"$$deleted":true,"_id":"ryfTuDNYiCpNCJOP"}
+{"$$deleted":true,"_id":"z5lPeYNyoaiSnXRv"}
+{"title":"This is a test list","userId":"Rfop9pzhSucP3DOD","created":"2020-09-07 11:29:34","_id":"NjYDlNreCb7jGbFB"}
+{"title":"This is also a test list","userId":"Rfop9pzhSucP3DOD","created":"2020-09-07 11:29:34","_id":"1YfMORcSofMDwAng"}
+{"$$deleted":true,"_id":"1YfMORcSofMDwAng"}
+{"$$deleted":true,"_id":"NjYDlNreCb7jGbFB"}
+{"title":"This is a test list","userId":"El42XCnBJJD4au2o","created":"2020-09-07 11:29:34","_id":"haxDAR7BVZt781xB"}
+{"$$deleted":true,"_id":"haxDAR7BVZt781xB"}
+{"title":"This is a test list","userId":"zTshplKS6HYCzvCJ","created":"2020-09-07 11:29:35","_id":"z7NNcbDgQenbrtiX"}
+{"$$deleted":true,"_id":"z7NNcbDgQenbrtiX"}
+{"title":"This is a test list","userId":"O3nDlNBOCN59SFtt","created":"2020-09-07 11:29:35","_id":"4ztICwaROv8kI78A"}
+{"title":"Updated list title","userId":"O3nDlNBOCN59SFtt","created":"2020-09-07 11:29:35","_id":"4ztICwaROv8kI78A","updated":"2020-09-07 11:29:35"}
+{"$$deleted":true,"_id":"4ztICwaROv8kI78A"}
+{"title":"This is a test list","userId":"unmVdz815iMhvXIu","created":"2020-09-07 11:29:35","_id":"taFSnDLE8pBs2bpY"}
+{"$$deleted":true,"_id":"taFSnDLE8pBs2bpY"}
+{"title":"This is a test list","userId":"jN5i5ff7EdKU4QJ3","created":"2020-09-07 11:29:35","_id":"l5Fr6K6idlVPkIvl"}
+{"title":"This is a test list","userId":"jPmc7zi7lddMAJkN","created":"2020-09-07 11:29:35","_id":"IPPir6M6kUcuLp51"}
+{"title":"This is a test list","userId":"7ANFsQtXxEZ1XI8B","created":"2020-09-07 11:29:35","_id":"QT9eZlA25H0iUQDL"}
+{"title":"This is a test list","userId":"8IHqvRDa6FK2UGH6","created":"2020-09-07 11:29:35","_id":"ELTVJmHdjuyeKj4L"}
+{"title":"This is a test list","userId":"sRsKo1qDsEciaGke","created":"2020-09-07 11:29:35","_id":"BN20GwPIQwzyULFQ"}
+{"title":"This is a test list","userId":"mAiiS7Qt14nZ1eFs","created":"2020-09-07 11:29:36","_id":"kSZEFabAgu0QaUuT"}

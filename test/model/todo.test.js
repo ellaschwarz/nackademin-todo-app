@@ -38,7 +38,7 @@ describe('Testing the list model', () => {
 		}
 
 		//Act
-		const numberOfTodos = await todoModel.countTodos();
+		const numberOfTodos = await todoModel.countTodos({});
 
 		//Assert
 		numberOfTodos.should.equal(10);
@@ -50,7 +50,6 @@ describe('Testing the list model', () => {
 
 		//Act
         const newTodo = await todoModel.insertTodo(title, 'done', this.test.userId, this.test.listId);
-        console.log(newTodo);
 		//Assert
 		newTodo.should.deep.equal({
 			title: newTodo.title,
@@ -68,6 +67,7 @@ describe('Testing the list model', () => {
 
 		//Act
 		let allTodos = await todoModel.findTodos({});
+		//console.log(allTodos);
 
 		//Assert
         allTodos.should.be.an('array');
@@ -78,7 +78,6 @@ describe('Testing the list model', () => {
 		
 		//Act
         const findTodo = await todoModel.findOneTodo(this.test.todoId);
-        console.log(findTodo);
 
         //Assert
 		findTodo.should.be.an('object');
@@ -103,7 +102,7 @@ describe('Testing the list model', () => {
 		
 		//Act
 		const deleteTodo = await todoModel.removeTodo(this.test.todoId);
-		const numberOfTodos = await todoModel.countTodos();
+		const numberOfTodos = await todoModel.countTodos({});
 
 		//Assert
 		deleteTodo.should.be.equal(1);

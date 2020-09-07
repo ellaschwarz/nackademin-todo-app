@@ -3,9 +3,11 @@ chai.should();
 
 const userModel = require('../../model/user-model');
 const listModel = require('../../model/list-model');
+const todoModel = require('../../model/todo-model');
+
 
 describe('Testing the list model', () => {
-	beforeEach(async function() {
+	beforeEach('insert a test user and a test list', async function() {
 		await listModel.clearAllLists();
 		await userModel.clearAllUsers();
 
@@ -28,7 +30,6 @@ describe('Testing the list model', () => {
 		for (let i = 0; i < 9; i++) {
 			await listModel.insertList(title, userId);
 		}
-
 		//Act
 		const numberOfLists = await listModel.countLists();
 
@@ -43,6 +44,7 @@ describe('Testing the list model', () => {
 
 		//Act
 		const newList = await listModel.insertList(title, userId);
+		const numberOfLists = await listModel.countLists();
 
 		//Assert
 		newList.should.deep.equal({
@@ -51,6 +53,8 @@ describe('Testing the list model', () => {
 			created: newList.created,
 			_id: newList._id
 		});
+		newList.should.be.an('object');
+		numberOfLists.should.equal(2);
 	});
 
 	it('should find all lists in database', async function() {
@@ -60,14 +64,15 @@ describe('Testing the list model', () => {
 
 		//Assert
 		allLists.should.be.an('array');
+		allLists.should.have.lengthOf(1);
+		allLists[0].should.have.property('title', allLists[0].title);
+
 	});
 
 	it('should find one list in database', async function() {
-		//Arrange
-		let listId = this.test.listId;
 
 		//Act
-		const findList = await listModel.findOneList(listId);
+		const findList = await listModel.findOneList(this.test.listId);
 
 		findList.should.be.an('object');
 		findList.should.have.property('title');
@@ -84,20 +89,31 @@ describe('Testing the list model', () => {
 		const updatedList = await listModel.findOneList(listId);
 
 		//Assert
-		updatedList.should.have.property('title');
-		updatedList.should.have.property('updated');
+		updatedList.should.have.property('title', updatedList.title);
+		updatedList.should.have.property('updated', updatedList.updated);
+		updatedList.should.be.an('object');
 	});
 
-	it('should remove one list item from database', async function() {
+	it('should remove one list item from database and delete its todo items', async function() {
 		//Arrange
-		let listId = this.test.listId;
+		await todoModel.insertTodo(
+			'Todo item1 in todo list',
+			'done',
+			this.test.userId,
+			this.test.listId
+		);
+
+		const todoItemsInList = await todoModel.findTodos({listId: this.test.listId})
 
 		//Act
-		const deleteList = await listModel.removeList(listId);
+		const deleteList = await listModel.removeList(this.test.listId);
 		const numberOfLists = await listModel.countLists();
+		const numberOfTodosInList = await todoModel.countTodos({listId: this.test.listId})
 
 		//Assert
 		deleteList.should.be.equal(1);
 		numberOfLists.should.be.equal(0);
+		todoItemsInList.should.have.lengthOf(1);
+		numberOfTodosInList.should.be.equal(0);
 	});
 });

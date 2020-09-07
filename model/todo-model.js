@@ -23,7 +23,6 @@ const findNextTodos = async (filter, perPage, page) => {
 };
 
 const insertTodo = async (title, done, userId, listId) => {
-	console.log('INSERT TODO')
 	const doc = await todoDB.insert({
 		title,
 		done,
@@ -45,17 +44,21 @@ const updateTodo = async (todoId, title, done) => {
 
 const removeTodo = async todoId => {
 	const doc = await todoDB.remove({ _id: todoId });
-	console.log(doc);
 	return doc;
 };
+
+// const removeTodos = async filter => {
+// 	const doc = await todoDB.remove(filter);
+// 	return doc;
+// };
 
 const clearAllTodos = async () => {
 	const doc = await todoDB.remove({}, { multi: true });
 	return doc;
 };
 
-const countTodos = async () => {
-	const doc = await todoDB.count({});
+const countTodos = async (filter) => {
+	const doc = await todoDB.count(filter);
 	return doc;
 };
 
@@ -67,5 +70,6 @@ module.exports = {
 	findNextTodos,
 	findOneTodo,
 	clearAllTodos,
-	countTodos
+	countTodos,
+	//removeTodos
 };
