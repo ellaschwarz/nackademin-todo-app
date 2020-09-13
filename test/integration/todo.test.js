@@ -10,11 +10,11 @@ const listModel = require('../../model/list-model');
 const userModel = require('../../model/user-model');
 const todoModel = require('../../model/todo-model');
 
-describe('RESTful resource test for lists', () => {
+describe('RESTful resource test for todos', () => {
 	beforeEach(
-		'Clear databases, authenticate user and create list before testing',
+		'Clear databases, authenticate user and create todo before testing',
 		async function() {
-			await listModel.clearAllLists();
+			await todoModel.clearAlltodos();
 			await userModel.clearAllUsers();
 
 			const user = await userModel.insertUser('tester', 'tester');
@@ -27,23 +27,25 @@ describe('RESTful resource test for lists', () => {
 			);
 			this.currentTest.token = authenticatedUser;
 
-			const list = await listModel.insertList(
-				'This is a test list',
-				this.currentTest.userId
+			let title = 'This is a test todo item';
+			const todo = await todoModel.insertTodo(
+				title,
+				'done',
+				this.currentTest.userId,
+				this.currentTest.listId
 			);
-
-			this.currentTest.list = list;
-			this.currentTest.listId = list._id;
+			this.currentTest.todo = todo;
+			this.currentTest.todoId = todo._id;
 		}
 	);
 
-	it('should create a new list ', async function() {
+	it('should create a new todo ', async function() {
 		const body = {
-			title: 'This is a new list from HTTP-request'
+			title: 'This is a new todo from HTTP-request'
 		};
 
 		request(app)
-			.post('/lists')
+			.post('/todos')
 			.set('Authorization', `Bearer ${this.test.token}`)
 			.set('Content-Type', 'application/json')
 			.send(body)
@@ -53,9 +55,9 @@ describe('RESTful resource test for lists', () => {
 			});
 	});
 
-	it('should read all lists', async function() {
+	it('should read all todos', async function() {
 		request(app)
-			.get('/lists')
+			.get('/todos')
 			.set('Authorization', `Bearer ${this.test.token}`)
 			.set('Content-Type', 'application/json')
 			.end((err, res) => {
@@ -63,9 +65,9 @@ describe('RESTful resource test for lists', () => {
 				expect(res).to.be.json;
 			});
 	});
-	it('should read one list', async function() {
+	it('should read one todo', async function() {
 		request(app)
-			.get(`/lists/${this.test.listId}`)
+			.get(`/todos/${this.test.todoId}`)
 			.set('Authorization', `Bearer ${this.test.token}`)
 			.set('Content-Type', 'application/json')
 			.end((err, res) => {
@@ -74,42 +76,14 @@ describe('RESTful resource test for lists', () => {
 				expect(res.body).to.deep.an('object');
 			});
 	});
-	it('should read one list and return its todo items', async function() {
-		await todoModel.insertTodo(
-			'Todo item1 in todo list',
-			'done',
-			this.test.userId,
-			this.test.listId
-		);
-		await todoModel.insertTodo(
-			'Todo item2 in todo list',
-			'done',
-			this.test.userId,
-			this.test.listId
-		);
-		await todoModel.insertTodo(
-			'Todo item3 in todo list',
-			'done',
-			this.test.userId,
-			this.test.listId
-		);
 
-		request(app)
-			.get(`/lists/${this.test.listId}/todos`)
-			.set('Authorization', `Bearer ${this.test.token}`)
-			.set('Content-Type', 'application/json')
-			.end((err, res) => {
-				expect(res).to.have.status(200);
-				expect(res.body).to.deep.an('array');
-			});
-	});
-	it('should update the title of a list', async function() {
+	it('should update the title of a todo', async function() {
 		const body = {
-			title: 'This is a new list title'
+			title: 'This is a new todo title'
 		};
 
 		request(app)
-			.patch(`/lists/${this.test.listId}`)
+			.patch(`/todos/${this.test.listId}`)
 			.set('Authorization', `Bearer ${this.test.token}`)
 			.set('Content-Type', 'application/json')
 			.send(body)
@@ -120,7 +94,7 @@ describe('RESTful resource test for lists', () => {
 	});
 	it('should delete one list', async function() {
 		request(app)
-			.delete(`/lists/${this.test.listId}`)
+			.delete(`/todos/${this.test.listId}`)
 			.set('Authorization', `Bearer ${this.test.token}`)
 			.set('Content-Type', 'application/json')
 			.end((err, res) => {

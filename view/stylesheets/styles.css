@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&display=swap');
-
 * {
   box-sizing: border-box;
   outline: 0;
@@ -22,20 +20,99 @@ body {
 }
 
 .app {
-  max-width: 500px;
+  position: relative;
+  margin: 5% auto;
+  width: 750px;
+  height: 620px;
+  border: 1px solid #d8dbe2;
+  box-shadow: 2px 2px 15px rgba(73, 88, 103, 0.3);
+  font-family: var(--font);
+  color: #455963;
+  font-size: 15px;
+  display: none; 
+}
+  /* max-width: 500px;
   width: 100%;
   margin: auto;
   background-color: #fff;
-  font-family: var(--font);
+  
   border-radius: 16px;
-  font-size: 15px;
+  
   overflow: hidden;
-  color: #455963;
+  
   box-shadow: 0 20px 80px rgba(0,0,0,.3);
-  display: none;
+  
+}
+*/
+
+.leftside-menu {
+  position: absolute;
+  height: 100%;
+  width: 20%;
+  background: rgba(223,173,252,1);
+  box-shadow: 2px 2px 15px rgba(73, 88, 103, 0.3);
+  text-align: center;
 }
 
+.avatar {
+  margin-top: 35%;
+  margin-bottom: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.avatar p {
+  color: #495867;
+  font-size: 0.8em;
+  margin-top: 5px;
+}
+
+.icon {
+  width: 85px;
+  height: 85px;
+  background: #b7cee8;
+  border-radius: 50%;
+}
+.icon p {
+  color: #ffffff;
+  font-size: 1.3em;
+  margin: 0;
+  margin-top: 12px;
+}
+
+li {
+  list-style-type: none;
+  color: #495867;
+  margin: 0;
+  padding: 15px;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+li:hover {
+  background: #ffffff;
+  color: #577399;
+  transition: all 0.3s ease;
+}
+
+.active {
+  background: #b7cee8;
+  color: #ffffff;
+  width: 167px;
+  margin-left: -10px;
+  box-shadow: 1px 1px 3px rgba(73, 88, 103, 0.3);
+  transition: all 0.3s ease;
+}
+.active:hover {
+  background: #ffffff;
+  color: #495867;
+  transition: all 0.3s ease;
+}
+
+
 .todo-list {
+  margin-left: 20%;
   max-height: 50vh;
   overflow: auto;
 }
@@ -82,7 +159,8 @@ body {
 }
 
 .list_items:hover {
-  background-color: #f6fbff;
+  background-color: #f6fbff91;
+  
 }
 
 .item_title {
@@ -93,9 +171,10 @@ body {
   text-overflow: ellipsis;
   grid-row: 1/2;
   grid-column: 2/3;
-  width: auto;
+  width: 100%;
   outline: none;
   border: none;
+  background-color: transparent;
 }
 
 .checkbox {
@@ -140,6 +219,7 @@ body {
   font-size: 20px;
   font-weight: 600;
   padding: 20px 20px 6px 20px;
+  margin-left: 20%;
 }
 
 /* .task-tools {
@@ -186,8 +266,10 @@ body {
   padding: 10px 20px;
   border: 0;
   box-shadow: 0 -1px 0 #e2e4ea inset;
-  color: #455963;
-  width: 90%;
+  color: #e1e8ec;
+  width: 70%;
+  margin-left: 25%;
+  background-color: transparent
 }
 
 .title_input::placeholder {
@@ -274,4 +356,70 @@ body {
     line-height: 1;
     font-family: var(--font);
     color: #8a9ca5;
+}
+
+
+/* #modal-container.two {
+  transform: scale(1);
+}
+#modal-container.two .modal-background {
+  background: rgba(0, 0, 0, 0);
+  animation: fadeIn 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#modal-container.two .modal-background .modal {
+  opacity: 0;
+  animation: scaleUp 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#modal-container.two + .content {
+  animation: scaleBack 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#modal-container.two.out {
+  animation: quickScaleDown 0s .5s linear forwards;
+}
+#modal-container.two.out .modal-background {
+  animation: fadeOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#modal-container.two.out .modal-background .modal {
+  animation: scaleDown 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#modal-container.two.out + .content {
+  animation: scaleForward 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+} */
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }

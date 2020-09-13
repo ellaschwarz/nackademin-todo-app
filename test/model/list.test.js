@@ -5,7 +5,6 @@ const userModel = require('../../model/user-model');
 const listModel = require('../../model/list-model');
 const todoModel = require('../../model/todo-model');
 
-
 describe('Testing the list model', () => {
 	beforeEach('insert a test user and a test list', async function() {
 		await listModel.clearAllLists();
@@ -58,7 +57,6 @@ describe('Testing the list model', () => {
 	});
 
 	it('should find all lists in database', async function() {
-
 		//Act
 		let allLists = await listModel.findLists({});
 
@@ -66,11 +64,9 @@ describe('Testing the list model', () => {
 		allLists.should.be.an('array');
 		allLists.should.have.lengthOf(1);
 		allLists[0].should.have.property('title', allLists[0].title);
-
 	});
 
 	it('should find one list in database', async function() {
-
 		//Act
 		const findList = await listModel.findOneList(this.test.listId);
 
@@ -103,12 +99,16 @@ describe('Testing the list model', () => {
 			this.test.listId
 		);
 
-		const todoItemsInList = await todoModel.findTodos({listId: this.test.listId})
+		const todoItemsInList = await todoModel.findTodos({
+			listId: this.test.listId
+		});
 
 		//Act
 		const deleteList = await listModel.removeList(this.test.listId);
 		const numberOfLists = await listModel.countLists();
-		const numberOfTodosInList = await todoModel.countTodos({listId: this.test.listId})
+		const numberOfTodosInList = await todoModel.countTodos({
+			listId: this.test.listId
+		});
 
 		//Assert
 		deleteList.should.be.equal(1);

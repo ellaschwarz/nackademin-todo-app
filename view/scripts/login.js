@@ -1,13 +1,13 @@
 document.addEventListener('DOMContentLoaded', e => {
 	const loginUser = async () => {
-		let username = document.getElementById('username_login').value;
+		let email = document.getElementById('email_login').value;
 		let password = document.getElementById('password_login').value;
 
-		// console.log(username);
+		// console.log(email);
 		// console.log(password);
 
 		let data = {
-			username: username,
+			email: email,
 			password: password
 		};
 
@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', e => {
 
 		let token = await response.json();
 		console.log(token);
-
 		window.sessionStorage.setItem('token', token);
 	};
 

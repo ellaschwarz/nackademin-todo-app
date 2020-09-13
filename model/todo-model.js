@@ -8,6 +8,14 @@ const findTodos = async filter => {
 	return doc;
 };
 
+const findAllTodos = async filter => {
+	const doc = await todoDB
+		.find(filter)
+		.sort({ created: -1 })
+		console.log(doc)
+	return doc;
+};
+
 const findOneTodo = async id => {
 	const doc = await todoDB.findOne({ _id: id }, {});
 	return doc;
@@ -47,17 +55,17 @@ const removeTodo = async todoId => {
 	return doc;
 };
 
-// const removeTodos = async filter => {
-// 	const doc = await todoDB.remove(filter);
-// 	return doc;
-// };
+const removeTodosFromUser = async userId => {
+	const doc = await todoDB.remove({userId: userId}, { multi: true });
+	return doc;
+};
 
 const clearAllTodos = async () => {
 	const doc = await todoDB.remove({}, { multi: true });
 	return doc;
 };
 
-const countTodos = async (filter) => {
+const countTodos = async filter => {
 	const doc = await todoDB.count(filter);
 	return doc;
 };
@@ -71,5 +79,6 @@ module.exports = {
 	findOneTodo,
 	clearAllTodos,
 	countTodos,
-	//removeTodos
+	findAllTodos,
+	removeTodosFromUser
 };

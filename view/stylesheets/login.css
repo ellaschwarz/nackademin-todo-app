@@ -18,7 +18,7 @@
     display: none;
 }
 
-.username_input, .password_input {
+.email_input, .password_input {
     flex: 1;
     font-size: 16px;
     font-family: var(--font);
@@ -29,10 +29,10 @@
     width: 90%;
   }
   
-  .username_input::placeholder, .password_input::placeholder {
+  .email_input::placeholder, .password_input::placeholder {
     color: #a8b5bb;
   }
   
-  .username_input:focus, .password_input:focus {
+  .email_input:focus, .password_input:focus {
     box-shadow: 0 -1px 0 #bdcdd6 inset;
   }

@@ -1,69 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="stylesheets/styles.css">
-    <link rel="stylesheet" type="text/css" href="stylesheets/login.css">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="stylesheet" type="text/css" href="stylesheets/styles.css" />
+		<link rel="stylesheet" type="text/css" href="stylesheets/login.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap"
+			rel="stylesheet"
+		/>
 
-    <title>Todo</title>
-</head>
-<body>
+		<title>Todo</title>
+	</head>
+	<body>
+		<!-- LOGIN APP -->
+		<div class="login_app" id="login_app">
+			<h1 class="login_title">LOGIN</h1>
+			<input
+				type="text"
+				id="email_login"
+				class="email_input"
+				name="email"
+				placeholder="Enter your email"
+				required
+			/>
+			<input
+				type="password"
+				id="password_login"
+				class="password_input"
+				name="password"
+				placeholder="Enter your password"
+				required
+			/>
+			<button id="signin_btn">SIGN IN</button>
+			<button id="register_btn">CREATE NEW USER</button>
+		</div>
+		<!-- LOGIN APP -->
 
-    <!-- LOGIN APP -->
-    <div class="login_app" id="login_app">
+		<!-- REGISTER APP -->
+		<div class="register_app">
+			<h1 class="register_title">REGISTER</h1>
+			<input
+				type="text"
+				id="email_register"
+				class="email_input"
+				name="email"
+				placeholder="Type a email"
+				required
+			/>
+			<input
+				type="password"
+				id="password_register"
+				class="password_input"
+				name="password"
+				placeholder="Type a password"
+				required
+			/>
 
-        <h1 class="login_title">LOGIN</h1>
-        <input type="text" id="username_login" class="username_input" name="username" placeholder="Enter your username" required>
-        <input type="password" id="password_login" class="password_input" name="password" placeholder="Enter your password" required>
-        <button id="signin_btn">SIGN IN</button>
-        <button id="register_btn">CREATE NEW USER</button>
+			<button id="register_in">SIGN IN</button>
+		</div>
+		<!-- REGISTER APP -->
 
+		<!-- TODO APP -->
+		<div class="app" id="app">
+			<div class="leftside-menu">
+				<div class="avatar">
+					<div class="icon"><p>PROFILE</p></div>
+					<p class="email">email</p>
+					<p class="role">role</p>
+				</div>
+				<nav class="menu">
+					<li class="active lists">Lists</li>
+				</nav>
+				<button class="add_user">Add new user</button>
+				<button class="sign_out">SIGN OUT</button>
+			</div>
+			<h1 class="app_title">Todo-list</h1>
+			<select class="task-filter"
+				>Sort by:
+				<option value="Created-Latest">Created - Latest</option>
+				<option value="Created-Earliest">Created - Earliest</option>
+				<option value="Updated-Latest ">Updated - Latest</option>
+				<option value="Updated-Earliest ">Updated - Earliest</option>
+			</select>
 
-    </div>
-    <!-- LOGIN APP -->
+			<br />
+			<ul class="todo-list" id="todo-list"></ul>
+			<button id="next_button">Next</button>
+			<br />
+			<div>
+				<input
+					type="text"
+					id="title"
+					class="title_input"
+					name="title"
+					placeholder="Add a todo"
+					required
+				/>
+				<button id="submit_todo">+</button>
+			</div>
 
-        <!-- LOGIN APP -->
-        <div class="register_app">
-        
-                <h1 class="register_title">REGISTER</h1>
-                <input type="text" id="username_register" class="username_input" name="username" placeholder="Type a username" required>
-                <input type="password" id="password_register" class="password_input" name="password" placeholder="Type a password" required>
+			<div class="cookie_footer content">
+                <p></p>
+                <button id="accept">Accept cookies</button>
+				<button id="myBtn">Read more</button>
+			</div>
 
-                <button id="register_in">SIGN IN</button>
-        
-        </div>
-            <!-- LOGIN APP -->
+			<!-- The Modal -->
+			<div id="myModal" class="modal">
+				<!-- Modal content -->
+				<div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div class="cookie_info">
+                        <h4>COOKIE POLICY</h5>
+                        <h5>What kind of data is saved in cookies?</h5>
+                        <p>In this Todo-application we're saving an identification which is encrypted in a token. We're saving this token in Session Storage
+                             in order for you to be able to sign in and to ensure both the user experiece and features of the application</p>
+                             <h5>Why do we save your data in a cookie?</h5>
+                             <p>The data is saved to make sure that you can get authenticated sign in safely.
+                                 The cookie also helps to improve the user experience when you're using the application</p>
+                             <h5>What is a cookie?</h5>
+                             <p>Cookies are usually small text files, given ID tags that are stored on your computer's browser directory or program 
+                                 data subfolders. Cookies are created when you use your browser to visit a website that uses cookies to keep track 
+                                 of your movements within the site, help you resume where you left off, remember your registered login, theme selection, 
+                                 preferences, and other customization functions.The website stores a corresponding file(with same ID tag)to the one they 
+                                 set in your browser and in this file they can track and keep information on your movements within the site and any 
+                                 information you may have voluntarily given while visiting the website, such as email address.</p>
+                                 <br>
+                                 <h4>INTEGRITY POLICY</h4>
+                                 <h5>Which data are being saved?</h5>
+                                 <p>In this application, we're saving your user information (email and password), which are being provided
+                                     when you register an account. We're also saving your user data such as todo-lists and todo-item that 
+                                     are created in the application. If you want to collect and see all your personal data that we've saved, just click the 
+                                     'Get all my data'-button and we'll send you the data to your email.
+                                 </p>
+                                 <h5>Why do we save data and how do we use it?</h5>
+                                 <p>The user information is saved in order to identify and authenticate the user, but also to display
+                                     the right user data to the right user. We're only saving essential data that are necessary in order to make the application function properly
+                                </p>
+                                <h5>How do we delete data?</h5>
+                                <p>As a user, you have the right to be forgotten and delete all data that are saved in this application
+                                    Click on the 'Delete all my data'-button to request your user and user data to be removed.
+                                    When you click on the button, the user account will be ended and erased as well as all data that belongs to it. 
+                                </p>
+                    </div>
+					
+                        <button class="forget">Delete all my data</button>
+                        <button class="forget">Get all my data</button>
 
-    
-    <!-- TODO APP -->
-    <div class="app" id="app">
-    <h1 class="app_title">Todo-list</h1>
-    <select class="task-filter">Sort by: 
-        <option value="Created-Latest">Created - Latest</option>
-        <option value="Created-Earliest">Created - Earliest</option>
-        <option value="Updated-Latest ">Updated - Latest</option>
-        <option value="Updated-Earliest ">Updated - Earliest</option>
-    </select>
- 
-    <br>
-    <ul class="todo-list" id="todo-list"></ul>
-    <button id="next_button">Next</button>
-    <br>
-    <!-- <h3>Add a todo</h3> -->
-    <!-- <form id="add_todo_form" action="http://127.0.0.1:3000/" method="POST" target="http://127.0.0.1:3000"> -->
-    <!-- <label for="add_todo"></label> -->
-    <input type="text" id="title" class="title_input" name="title" placeholder="Add a todo" required>
-    <button id="submit_todo">+</button></input>
-    
-    <!-- </form> -->
+				</div>
+			</div>
+		</div>
 
-    </div>
-    <!-- TODO APP -->
-    <script src="index.js"></script>
-    <script src="login.js"></script>
+		<!-- <div id="modal-container">
+            <div class="modal-background">
+              <div class="modal">
+                <h2>I'm a Modal</h2>
+                <p>Hear me roar.</p>
+                <svg class="modal-svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none">
+                                          <rect x="0" y="0" fill="none" width="226" height="162" rx="3" ry="3"></rect>
+                                      </svg>
+              </div>
+            </div>
+    </div> -->
 
+		<!-- <div class="cookie_footer content">
+            <div id="two" class="button">Revealing</div>
+    </div> -->
 
-</body>
+		<!-- TODO APP -->
+		<script src="/scripts/index.js"></script>
+		<script src="/scripts/login.js"></script>
+	</body>
 </html>

@@ -1,6 +1,5 @@
 const { listDB, todoDB } = require('../db/db');
 
-
 const findLists = async filter => {
 	const doc = await listDB.find(filter).sort({ created: -1 });
 	return doc;
@@ -12,9 +11,9 @@ const findOneList = async id => {
 };
 
 const findTodoItems = async id => {
-	const todos = await todoDB.find({listId: id})
+	const todos = await todoDB.find({ listId: id });
 	return todos;
-}
+};
 
 const insertList = async (title, userId) => {
 	const doc = await listDB.insert({
@@ -36,9 +35,14 @@ const updateList = async (listId, title) => {
 
 const removeList = async listId => {
 	const doc = await listDB.remove({ _id: listId });
-	const todo = await todoDB.remove({listId: listId}, { multi: true })
+	const todo = await todoDB.remove({ listId: listId }, { multi: true });
 	return doc;
 };
+
+const removeListFromUser = async userId => {
+	const doc = await listDB.remove({ userId: userId }, { multi: true });
+	return doc;
+}
 
 const clearAllLists = async () => {
 	const doc = await listDB.remove({}, { multi: true });
@@ -58,5 +62,6 @@ module.exports = {
 	findLists,
 	clearAllLists,
 	countLists,
-	findTodoItems
+	findTodoItems,
+	removeListFromUser
 };

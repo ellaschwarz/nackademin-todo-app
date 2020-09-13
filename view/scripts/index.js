@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', e => {
 		let titleItem = document.createElement('input');
 		titleItem.type = 'text';
 		titleItem.value = item.title;
+		titleItem.style.backgroundColor = 'none';
 		titleItem.setAttribute('id', item._id);
 		titleItem.setAttribute('class', 'item_title');
 		li.appendChild(titleItem);
@@ -71,6 +72,11 @@ document.addEventListener('DOMContentLoaded', e => {
 
 	const token = sessionStorage.getItem('token');
 	const bearer = 'Bearer ' + token;
+
+	if(sessionStorage.getItem('token')) {
+		document.getElementById('app').style.display = 'block';
+		document.getElementById('login_app').style.display = 'none';
+	}
 
 	const getTodos = async () => {
 		let request = await fetch('http://127.0.0.1:3000/todos', {
@@ -149,11 +155,13 @@ document.addEventListener('DOMContentLoaded', e => {
 			const todoItems = await request.json();
 			console.log(todoItems);
 
+
 			todoItems.forEach(item => {
 				createListItem(item);
 			});
 
 			next = next + 1;
+
 			console.log(next);
 		});
 
@@ -171,4 +179,55 @@ document.addEventListener('DOMContentLoaded', e => {
 	//}
 
 	getTodos();
+
+	// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+	// let button = document.getElementsByClassName('button');
+
+	// button.addEventListener('click', function () {
+	// 	let buttonId = button.setAttribute('id');
+	// 	document.getElementById('modal-container').removeAttribute('class').classList.add(buttonId);
+	// 	document.getElementsByTagName('body').classList.add('modal-active');
+	// });
+
+	// document.getElementById('modal-container').addEventListener('click', function() {
+	// 	button.classList.add('out');
+	// 	document.getElementsByName('body').classList.remove('modal-active');
+	// });
+
+	// $('.button').click(function(){
+	// 	var buttonId = $(this).attr('id');
+	// 	$('#modal-container').removeAttr('class').addClass(buttonId);
+	// 	$('body').addClass('modal-active');
+	//   })
+	  
+	//   $('#modal-container').click(function(){
+	// 	$(this).addClass('out');
+	// 	$('body').removeClass('modal-active');
+	//   });
+
 });

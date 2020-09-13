@@ -10,7 +10,7 @@ const {
 const createTodoItem = async (req, res) => {
 	const { title, done, listId } = req.body;
 	try {
-		const todo = await insertTodo(title, done, listId, req.user.id);
+		const todo = await insertTodo(title, done, req.user.id, listId);
 		return res.status(200).json(todo);
 	} catch (err) {
 		return res.status(202).json(err);
