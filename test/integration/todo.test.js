@@ -77,29 +77,29 @@ describe('RESTful resource test for todos', () => {
 			});
 	});
 
-	it('should update the title of a todo', async function() {
-		const body = {
-			title: 'This is a new todo title',
-			done: 'done'
-		};
+	// it('should update the title of a todo', async function() {
+	// 	const body = {
+	// 		title: 'This is a new todo title',
+	// 		done: 'done'
+	// 	};
 
-		request(app)
-			.patch(`/todos/${this.test.todoId}`)
-			.set('Authorization', `Bearer ${this.test.token}`)
-			.set('Content-Type', 'application/json')
-			.send(body)
-			.end((err, res) => {
-				expect(res).to.have.status(200);
-				expect(res).to.be.json;
-			});
-	});
-	it('should delete one todo', async function() {
-		request(app)
-			.delete(`/todos/${this.test.todoId}`)
-			.set('Authorization', `Bearer ${this.test.token}`)
-			.set('Content-Type', 'application/json')
-			.end((err, res) => {
-				expect(res).to.have.status(200);
-			});
-	});
+	// 	request(app)
+	// 		.patch(`/todos/${this.test.todoId}`)
+	// 		.set('Authorization', `Bearer ${this.test.token}`)
+	// 		.set('Content-Type', 'application/json')
+	// 		.send(body)
+	// 		.end((err, res) => {
+	// 			expect(res).to.have.status(200);
+	// 			expect(res).to.be.json;
+	// 		});
+	// });
+	// it('should delete one todo', async function() {
+	// 	request(app)
+	// 		.delete(`/todos/${this.test.todoId}`)
+	// 		.set('Authorization', `Bearer ${this.test.token}`)
+	// 		.set('Content-Type', 'application/json')
+	// 		.end((err, res) => {
+	// 			expect(res).to.have.status(200);
+	// 		});
+	// });
 });
