@@ -1,4 +1,13 @@
 const { listDB, todoDB } = require('../db/db');
+const mongoose = require ('mongoose');
+
+const listSchema = new mongoose.Schema({
+	title: String,
+	userId: String,
+	created: String,
+});
+
+//const List = 
 
 const findLists = async filter => {
 	const doc = await listDB.find(filter).sort({ created: -1 });
