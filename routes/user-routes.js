@@ -3,7 +3,8 @@ const {
     userLogin,
     userUpdate,
     userData,
-    deleteUserData
+    deleteUserData,
+    getUser
 } = require('../controllers/user-controller');
 
 const {
@@ -13,9 +14,11 @@ const {
 const express = require('express');
 const router = express.Router();
 
-router.get('/:id', authorizeUser, userData);
-router.post('/', authorizeUser, createUser);
 router.post('/login', userLogin);
+router.get('/:id', authorizeUser, userData);
+router.get('/user', authorizeUser, getUser);
+router.post('/', authorizeUser, createUser);
+
 router.patch('/:id', authorizeUser, userUpdate);
 router.delete('/:id', authorizeUser, deleteUserData)
 

@@ -21,9 +21,9 @@ body {
 
 .app {
   position: relative;
-  margin: 5% auto;
+  margin: 4% auto;
   width: 750px;
-  height: 620px;
+  height: 600px;
   border: 1px solid #d8dbe2;
   box-shadow: 2px 2px 15px rgba(73, 88, 103, 0.3);
   font-family: var(--font);
@@ -63,7 +63,7 @@ body {
 }
 .avatar p {
   color: #495867;
-  font-size: 0.8em;
+  font-size: 0.5em;
   margin-top: 5px;
 }
 
@@ -175,6 +175,7 @@ li:hover {
   outline: none;
   border: none;
   background-color: transparent;
+  color: #495867;
 }
 
 .checkbox {
@@ -358,6 +359,10 @@ li:hover {
     color: #8a9ca5;
 }
 
+.add_user {
+  display: none;
+}
+
 
 /* #modal-container.two {
   transform: scale(1);
@@ -387,6 +392,15 @@ li:hover {
 } */
 
 /* The Modal (background) */
+
+.cookie_footer {
+  background-color: white;
+  padding: 2%;
+  width: 100%;
+  z-index: 10;
+  margin-bottom: 10;
+}
+
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */

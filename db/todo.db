@@ -2,12 +2,12 @@
 {"title":"Hoppa upp och ner","userId":"MtcY3DfKjOieMC7U","created":"2020-08-28 11:16:14","_id":"2CYuAedBNYPIsDi7","done":false,"updated":"2020-08-29 15:51:44"}
 {"title":"testetetet","done":false,"userId":"MtcY3DfKjOieMC7U","created":"2020-08-29 17:24:52","_id":"FhEgymxzAfqRcChg"}
 {"title":"Köp mjölk","done":false,"created":"2020-08-21 13:57:29","_id":"GXfKSfEZzN4WCaJ8","updated":"2020-08-23 09:37:41"}
+{"title":"adding a todo","done":false,"userId":"MtcY3DfKjOieMC7U","created":"2020-09-13 12:03:41","_id":"HwcMLxFaN8AtssGQ"}
 {"title":"Kolla på film","done":false,"created":"2020-08-21 13:57:54","_id":"LSgVWbOKr5r3IhET","updated":"2020-08-23 09:38:44"}
 {"title":"tetetet","done":false,"userId":"MtcY3DfKjOieMC7U","created":"2020-08-29 17:26:03","_id":"LZ0WPR45EKMqpKGX"}
 {"title":"Drick vatten","done":"false","created":"2020-08-21 14:03:22","_id":"LzS8fJArFIrG8TBE","updated":"2020-08-23 09:16:53"}
 {"title":"Äta chips och kolla på film","userId":"MtcY3DfKjOieMC7U","created":"2020-08-28 20:13:55","_id":"XlKYCGpf4VW5uX7C"}
 {"title":"Borsta tänderna","done":false,"created":"2020-08-21 13:35:37","_id":"YDG5gYHUv7R2GMCW"}
-{"title":"hellooooo","done":false,"listId":"MtcY3DfKjOieMC7U","created":"2020-09-07 15:09:06","_id":"YRCphI6Q9Xi3b8K5"}
 {"title":"Ät en kaka","done":false,"created":"2020-08-21 14:37:00","_id":"YiAlEQ0WYdL4KkvY"}
 {"title":"bryans todoooo","userId":"DqEv3G6IMDfd761q","created":"2020-08-31 11:31:43","_id":"ex2oAUP4MfDKCu7A","updated":"2020-08-31 11:33:34"}
 {"title":"Städa","done":false,"created":"2020-08-21 16:07:27","_id":"g6PsF0p7CsLCVTey","updated":"2020-08-23 20:24:52"}
@@ -17,5 +17,3 @@
 {"title":"Ät en glass","done":false,"created":"2020-08-21 13:35:45","_id":"qeZlThUgLF8iRWnm"}
 {"title":"khohkoh","done":false,"userId":"MtcY3DfKjOieMC7U","created":"2020-08-29 17:30:04","_id":"t1lSAIUqZ0rNi33Q"}
 {"title":"This is a list item","userId":"M5R5qQE1zLPI9ZBA","listId":"MtcY3DfKjOieMC7U","created":"2020-09-03 11:22:26","_id":"zY61yZaCBzgAz5yg"}
-{"title":"adding a todo","done":false,"userId":"MtcY3DfKjOieMC7U","created":"2020-09-13 12:03:41","_id":"HwcMLxFaN8AtssGQ"}
-{"$$deleted":true,"_id":"YRCphI6Q9Xi3b8K5"}
