@@ -5,7 +5,7 @@ const userModel = require('../../model/user-model');
 const todoModel = require('../../model/todo-model');
 const listModel = require('../../model/list-model');
 
-describe('Testing the list model', () => {
+describe('Testing the todo model', () => {
 	beforeEach(
 		'Clear databases, then create a user, list and todo item before tests',
 		async function() {

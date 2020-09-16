@@ -14,7 +14,7 @@ describe('RESTful resource test for todos', () => {
 	beforeEach(
 		'Clear databases, authenticate user and create todo before testing',
 		async function() {
-			await todoModel.clearAlltodos();
+			await todoModel.clearAllTodos();
 			await userModel.clearAllUsers();
 
 			const user = await userModel.insertUser('tester', 'tester');
