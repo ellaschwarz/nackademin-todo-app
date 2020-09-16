@@ -1,65 +1,26 @@
-{"title":"This is a test list","userId":"tgUoV1tkSCQ1BFD8","created":"2020-09-16 10:07:58","_id":"DZ2C80PkkYitoIJ9"}
-{"title":"This is a test list","userId":"JLbmB7AbHGJlhgKE","created":"2020-09-16 10:07:58","_id":"I25gCVsupLMiMqBz"}
-{"title":"This is a test list","userId":"sABlvF6HTYtb0cW2","created":"2020-09-16 10:07:58","_id":"KrmDNuIdXIOugBqf"}
-{"title":"This is a test list","userId":"YkIKcspoLcWaeyh7","created":"2020-09-16 10:07:58","_id":"T1g78q2wm2CGJcml"}
-{"title":"This is a test list","userId":"gCVYaAoQujuqDg2z","created":"2020-09-16 10:07:58","_id":"rfGxLKm6mpOk9Odi"}
-{"title":"This is a test list","userId":"0LsUM8nEytzv5Npz","created":"2020-09-16 10:07:59","_id":"xnSG9FaH9Fj0CMLm"}
-{"$$deleted":true,"_id":"DZ2C80PkkYitoIJ9"}
-{"$$deleted":true,"_id":"I25gCVsupLMiMqBz"}
-{"$$deleted":true,"_id":"KrmDNuIdXIOugBqf"}
-{"$$deleted":true,"_id":"T1g78q2wm2CGJcml"}
-{"$$deleted":true,"_id":"rfGxLKm6mpOk9Odi"}
-{"$$deleted":true,"_id":"xnSG9FaH9Fj0CMLm"}
-{"title":"This is a test list","userId":"NJVQZHuugJGQFllU","created":"2020-09-16 10:52:59","_id":"Q3vWPw6IDsxnO5vH"}
-{"title":"This is a new list from HTTP-request","userId":"NJVQZHuugJGQFllU","created":"2020-09-16 10:52:59","_id":"9cEqcWBeEq9uSZSl"}
-{"$$deleted":true,"_id":"9cEqcWBeEq9uSZSl"}
-{"$$deleted":true,"_id":"Q3vWPw6IDsxnO5vH"}
-{"title":"This is a test list","userId":"2OOW0SJDFUSGKyxg","created":"2020-09-16 10:53:00","_id":"wO682ksBT8eTrE9h"}
-{"$$deleted":true,"_id":"wO682ksBT8eTrE9h"}
-{"title":"This is a test list","userId":"P2NFq4wMSj66jpSA","created":"2020-09-16 10:53:00","_id":"nwHtoE6xovGIOXsM"}
-{"$$deleted":true,"_id":"nwHtoE6xovGIOXsM"}
-{"title":"This is a test list","userId":"3t915TCaekkZyeBW","created":"2020-09-16 10:53:00","_id":"gZbyyX0f7xaoCJh4"}
-{"$$deleted":true,"_id":"gZbyyX0f7xaoCJh4"}
-{"title":"This is a test list","userId":"wb0nFzwj8Lw1x3bM","created":"2020-09-16 10:53:00","_id":"gHRawjeFE0gCDIRN"}
-{"$$deleted":true,"_id":"gHRawjeFE0gCDIRN"}
-{"title":"This is a test list","userId":"1CdP50DQmwv1Dzzx","created":"2020-09-16 10:53:01","_id":"7xvQcer0z6tv5beJ"}
-{"$$deleted":true,"_id":"7xvQcer0z6tv5beJ"}
-{"title":"This is a test list","userId":"Panm8Y32pjupQbfD","created":"2020-09-16 10:53:01","_id":"oHmZ4CWAIPfqbdmr"}
-{"title":"This is another test list","userId":"Panm8Y32pjupQbfD","created":"2020-09-16 10:53:01","_id":"vFnevNACg6TXQD3W"}
-{"title":"This is another test list","userId":"Panm8Y32pjupQbfD","created":"2020-09-16 10:53:01","_id":"uyFCQNnjr3aPQCB0"}
-{"title":"This is another test list","userId":"Panm8Y32pjupQbfD","created":"2020-09-16 10:53:01","_id":"hY64ks7C2xmS2tUH"}
-{"title":"This is another test list","userId":"Panm8Y32pjupQbfD","created":"2020-09-16 10:53:01","_id":"u2zRIcrPAYYcVKzZ"}
-{"title":"This is another test list","userId":"Panm8Y32pjupQbfD","created":"2020-09-16 10:53:01","_id":"VuZhmyafpg2RYZE7"}
-{"title":"This is another test list","userId":"Panm8Y32pjupQbfD","created":"2020-09-16 10:53:01","_id":"ujT1gTS5RKjo0WF6"}
-{"title":"This is another test list","userId":"Panm8Y32pjupQbfD","created":"2020-09-16 10:53:01","_id":"5mWrSZifxWwIce79"}
-{"title":"This is another test list","userId":"Panm8Y32pjupQbfD","created":"2020-09-16 10:53:01","_id":"PVTImRV24yr8Nkzv"}
-{"title":"This is another test list","userId":"Panm8Y32pjupQbfD","created":"2020-09-16 10:53:01","_id":"p5lGNTGTOzaS2VQN"}
-{"$$deleted":true,"_id":"5mWrSZifxWwIce79"}
-{"$$deleted":true,"_id":"PVTImRV24yr8Nkzv"}
-{"$$deleted":true,"_id":"VuZhmyafpg2RYZE7"}
-{"$$deleted":true,"_id":"hY64ks7C2xmS2tUH"}
-{"$$deleted":true,"_id":"oHmZ4CWAIPfqbdmr"}
-{"$$deleted":true,"_id":"p5lGNTGTOzaS2VQN"}
-{"$$deleted":true,"_id":"u2zRIcrPAYYcVKzZ"}
-{"$$deleted":true,"_id":"ujT1gTS5RKjo0WF6"}
-{"$$deleted":true,"_id":"uyFCQNnjr3aPQCB0"}
-{"$$deleted":true,"_id":"vFnevNACg6TXQD3W"}
-{"title":"This is a test list","userId":"14foinQSY497z8np","created":"2020-09-16 10:53:01","_id":"d0boXvfAvePBEBjB"}
-{"title":"This is also a test list","userId":"14foinQSY497z8np","created":"2020-09-16 10:53:01","_id":"V6hfDd5ALLXoV86U"}
-{"$$deleted":true,"_id":"V6hfDd5ALLXoV86U"}
-{"$$deleted":true,"_id":"d0boXvfAvePBEBjB"}
-{"title":"This is a test list","userId":"bBMYQg29RqSRYdxG","created":"2020-09-16 10:53:01","_id":"PVGZnKoh6AUDc5a1"}
-{"$$deleted":true,"_id":"PVGZnKoh6AUDc5a1"}
-{"title":"This is a test list","userId":"1E79YT1XyMxOoYrY","created":"2020-09-16 10:53:01","_id":"TDf4HNufIle5pIA1"}
-{"$$deleted":true,"_id":"TDf4HNufIle5pIA1"}
-{"title":"This is a test list","userId":"qRWw6QSgqWRBjzZM","created":"2020-09-16 10:53:01","_id":"s3cqJDHpnoveOhN7"}
-{"title":"Updated list title","userId":"qRWw6QSgqWRBjzZM","created":"2020-09-16 10:53:01","_id":"s3cqJDHpnoveOhN7","updated":"2020-09-16 10:53:01"}
-{"$$deleted":true,"_id":"s3cqJDHpnoveOhN7"}
-{"title":"This is a test list","userId":"VAU7w53geHPZsySG","created":"2020-09-16 10:53:02","_id":"629S47Efrd1VgJph"}
-{"$$deleted":true,"_id":"629S47Efrd1VgJph"}
-{"title":"This is a test list","userId":"Vz8uKVRDjqCetcsF","created":"2020-09-16 10:53:02","_id":"aBR9vxnuqUNFiqG5"}
-{"title":"This is a test list","userId":"vE4RM5AFxsLPlH9H","created":"2020-09-16 10:53:02","_id":"jzYIw2gKMBZDmIoC"}
-{"title":"This is a test list","userId":"ufiz1zQg7nU9feXi","created":"2020-09-16 10:53:02","_id":"RRdEGTS9UybcVZX2"}
-{"title":"This is a test list","userId":"D4z3xJRQnBqHyim7","created":"2020-09-16 10:53:02","_id":"pnKFbqRvCnp7hFKC"}
-{"title":"This is a test list","userId":"xMXWJdK6USZzwVln","created":"2020-09-16 10:53:02","_id":"LLVMNGFyP0DPegcY"}
-{"title":"This is a test list","userId":"xcvPQDpuDVud3dhL","created":"2020-09-16 10:53:02","_id":"1DAIV2SDS84hAw4k"}
+{"title":"This is a test list","userId":"61OaCLkZG0rKucZC","created":"2020-09-16 11:12:32","_id":"68kFUudZiyzADLvo"}
+{"title":"This is a test list","userId":"wTGE9gRzUE12kbnL","created":"2020-09-16 11:12:32","_id":"6W80IcoasjCXV5rv"}
+{"title":"This is a test list","userId":"OqxxcA3h7jocEMWe","created":"2020-09-16 11:12:32","_id":"OkfGDfhMm3IBFbzm"}
+{"title":"This is a test list","userId":"E7SI2iK25tHU5CSH","created":"2020-09-16 11:12:32","_id":"QrbJTc2SYL2pFQUk"}
+{"title":"This is a test list","userId":"8FFWyZihRG6WJXYQ","created":"2020-09-16 11:12:32","_id":"RXSqFHFMDisQDbFo"}
+{"title":"This is a test list","userId":"afRda7qgyPaL0Tue","created":"2020-09-16 11:12:32","_id":"ZNwb0ihMOHFHTfp5"}
+{"$$deleted":true,"_id":"68kFUudZiyzADLvo"}
+{"$$deleted":true,"_id":"6W80IcoasjCXV5rv"}
+{"$$deleted":true,"_id":"OkfGDfhMm3IBFbzm"}
+{"$$deleted":true,"_id":"QrbJTc2SYL2pFQUk"}
+{"$$deleted":true,"_id":"RXSqFHFMDisQDbFo"}
+{"$$deleted":true,"_id":"ZNwb0ihMOHFHTfp5"}
+{"title":"This is a test list","userId":"ANtAnFo9wqXXVajC","created":"2020-09-16 11:23:37","_id":"h9ZLy5TxOQSL1lhr"}
+{"title":"This is a new list from HTTP-request","userId":"ANtAnFo9wqXXVajC","created":"2020-09-16 11:23:38","_id":"uwiMev59vI86A9X6"}
+{"$$deleted":true,"_id":"h9ZLy5TxOQSL1lhr"}
+{"$$deleted":true,"_id":"uwiMev59vI86A9X6"}
+{"title":"This is a test list","userId":"ZWhC4kiIkVKtLq3p","created":"2020-09-16 11:23:38","_id":"eaY81FzEYlPPFQZ4"}
+{"$$deleted":true,"_id":"eaY81FzEYlPPFQZ4"}
+{"title":"This is a test list","userId":"V9MQZG1EVa1USTgU","created":"2020-09-16 11:23:38","_id":"HcYIj73s91RBs2HM"}
+{"$$deleted":true,"_id":"HcYIj73s91RBs2HM"}
+{"title":"This is a test list","userId":"F9Si4HEkmSaSGX3u","created":"2020-09-16 11:23:38","_id":"9M7dZrbG6GaxqwEq"}
+{"$$deleted":true,"_id":"9M7dZrbG6GaxqwEq"}
+{"title":"This is a test list","userId":"4CefnyXSmhtYa2Kl","created":"2020-09-16 11:23:39","_id":"mipqG48p8iuxhphv"}
+{"$$deleted":true,"_id":"mipqG48p8iuxhphv"}
+{"title":"This is a test list","userId":"8v4EZIY5paULEICA","created":"2020-09-16 11:23:39","_id":"ivCzlbmB5cx6loAM"}
+{"$$deleted":true,"_id":"ivCzlbmB5cx6loAM"}

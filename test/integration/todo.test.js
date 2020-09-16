@@ -79,11 +79,12 @@ describe('RESTful resource test for todos', () => {
 
 	it('should update the title of a todo', async function() {
 		const body = {
-			title: 'This is a new todo title'
+			title: 'This is a new todo title',
+			done: 'done'
 		};
 
 		request(app)
-			.patch(`/todos/${this.test.listId}`)
+			.patch(`/todos/${this.test.todoId}`)
 			.set('Authorization', `Bearer ${this.test.token}`)
 			.set('Content-Type', 'application/json')
 			.send(body)
@@ -92,9 +93,9 @@ describe('RESTful resource test for todos', () => {
 				expect(res).to.be.json;
 			});
 	});
-	it('should delete one list', async function() {
+	it('should delete one todo', async function() {
 		request(app)
-			.delete(`/todos/${this.test.listId}`)
+			.delete(`/todos/${this.test.todoId}`)
 			.set('Authorization', `Bearer ${this.test.token}`)
 			.set('Content-Type', 'application/json')
 			.end((err, res) => {
