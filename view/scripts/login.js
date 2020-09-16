@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', e => {
 			password: password
 		};
 
-		let response = await fetch('http://127.0.0.1:3000/users/login', {
+		let response = await fetch('https://glacial-plains-71562.herokuapp.com/users/login', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json;charset=utf-8'

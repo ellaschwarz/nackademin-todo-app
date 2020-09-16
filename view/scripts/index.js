@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', e => {
 
 	const getUser = async () => {
 
-		let request = await fetch('http://127.0.0.1:3000/users/user', {
+		let request = await fetch('https://glacial-plains-71562.herokuapp.com/users/user', {
 			headers: { Authorization: bearer }
 		});
 
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', e => {
 
 
 	const getTodos = async () => {
-		let request = await fetch('http://127.0.0.1:3000/todos', {
+		let request = await fetch('https://glacial-plains-71562.herokuapp.com/todos', {
 			headers: { Authorization: bearer }
 		});
 		const todoItems = await request.json();
@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', e => {
 			done: false
 		};
 
-		let response = await fetch('http://127.0.0.1:3000/todos', {
+		let response = await fetch('https://glacial-plains-71562.herokuapp.com/todos', {
 			method: 'POST',
 
 			headers: {
@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', e => {
 			done: checkBox
 		};
 
-		let response = await fetch('http://127.0.0.1:3000/todos/' + id, {
+		let response = await fetch('https://glacial-plains-71562.herokuapp.com/todos/' + id, {
 			method: 'PATCH',
 			headers: {
 				'Content-Type': 'application/json;charset=utf-8',
@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', e => {
 	const deleteTodos = async item => {
 		let id = item._id;
 
-		let response = await fetch('http://127.0.0.1:3000/todos/' + id, {
+		let response = await fetch('https://glacial-plains-71562.herokuapp.com/todos/' + id, {
 			method: 'DELETE',
 			headers: {
 				'Content-Type': 'application/json;charset=utf-8',
