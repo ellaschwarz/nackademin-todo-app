@@ -5,18 +5,20 @@ const {
 	findUserData,
 	deleteUser
 } = require('../model/user-model');
+
 const { findLists, removeListFromUser } = require('../model/list-model');
 const { findAllTodos, removeTodosFromUser } = require('../model/todo-model');
 
 const createUser = async (req, res) => {
 	const { email, password } = req.body;
+	console.log('entering create user');
 	try {
-		if ((req.user.role = 'admin')) {
+		//if ((req.user.role = 'admin')) {
 			const user = await insertUser(email, password);
 			res.status(200).send(user);
-		} else {
-			throw new Error('Only admin can create a new user');
-		}
+		// } else {
+		// 	throw new Error('Only admin can create a new user');
+		// }
 	} catch (err) {
 		res.status(404).send(err);
 	}

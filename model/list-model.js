@@ -1,13 +1,15 @@
-const { listDB, todoDB } = require('../db/db');
+//const { listDB, todoDB } = require('../db/db');
+
 const mongoose = require ('mongoose');
+const Schema = mongoose.Schema;
 
 const listSchema = new mongoose.Schema({
 	title: String,
-	userId: String,
+	userId: {type: Schema.Types.ObjectId, ref: "usersDB"},
 	created: String,
 });
 
-//const List = 
+const listDB = mongoose.model('listDB', listSchema);
 
 const findLists = async filter => {
 	const doc = await listDB.find(filter).sort({ created: -1 });
@@ -19,13 +21,8 @@ const findOneList = async id => {
 	return doc;
 };
 
-const findTodoItems = async id => {
-	const todos = await todoDB.find({ listId: id });
-	return todos;
-};
-
 const insertList = async (title, userId) => {
-	const doc = await listDB.insert({
+	const doc = await listDB.create({
 		title,
 		userId,
 		created: new Date().toLocaleString()
@@ -43,18 +40,18 @@ const updateList = async (listId, title) => {
 };
 
 const removeList = async listId => {
-	const doc = await listDB.remove({ _id: listId });
-	const todo = await todoDB.remove({ listId: listId }, { multi: true });
+	const doc = await listDB.delete({ _id: listId });
+	const todo = await todoDB.deleteMany({ listId: listId });
 	return doc;
 };
 
 const removeListFromUser = async userId => {
-	const doc = await listDB.remove({ userId: userId }, { multi: true });
+	const doc = await listDB.delete({ userId: userId }, { multi: true });
 	return doc;
 }
 
 const clearAllLists = async () => {
-	const doc = await listDB.remove({}, { multi: true });
+	const doc = await listDB.deleteMany({}, { multi: true });
 	return doc;
 };
 
@@ -71,6 +68,5 @@ module.exports = {
 	findLists,
 	clearAllLists,
 	countLists,
-	findTodoItems,
 	removeListFromUser
 };

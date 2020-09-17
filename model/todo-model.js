@@ -1,4 +1,17 @@
-const { todoDB } = require('../db/db');
+//const { todoDB } = require('../db/db');
+
+const mongoose = require ('mongoose');
+const Schema = mongoose.Schema;
+
+const todoSchema = new mongoose.Schema({
+	title: String,
+	done: String,
+	userId: {type: Schema.Types.ObjectId, ref: "usersDB"},
+	listId: {type: Schema.Types.ObjectId, ref: "listDB"},
+	created: String
+});
+
+const todoDB = mongoose.model('todoDB', todoSchema);
 
 const findTodos = async filter => {
 	const doc = await todoDB
@@ -21,6 +34,11 @@ const findOneTodo = async id => {
 	return doc;
 };
 
+const findTodoByList = async id => {
+	const todos = await todoDB.find({ listId: id });
+	return todos;
+};
+
 const findNextTodos = async (filter, perPage, page) => {
 	const doc = await todoDB
 		.find(filter)
@@ -31,7 +49,7 @@ const findNextTodos = async (filter, perPage, page) => {
 };
 
 const insertTodo = async (title, done, userId, listId) => {
-	const doc = await todoDB.insert({
+	const doc = await todoDB.create({
 		title,
 		done,
 		userId,
@@ -80,5 +98,6 @@ module.exports = {
 	clearAllTodos,
 	countTodos,
 	findAllTodos,
-	removeTodosFromUser
+	removeTodosFromUser,
+	findTodoByList
 };

@@ -4,8 +4,9 @@ const {
 	updateList,
 	removeList,
 	findLists,
-	findTodoItems
 } = require('../model/list-model');
+
+const {findTodoByList} = require('../model/todo-model')
 
 const readLists = async (req, res) => {
 	try {
@@ -24,7 +25,7 @@ const readLists = async (req, res) => {
 const getListItems = async (req, res) => {
 	try {
 		const listId = req.params.id;
-		let todoItems = await findTodoItems(listId);
+		let todoItems = await findTodoByList(listId);
 		return res.status(200).json(todoItems);
 	} catch (err) {
 		return res.status(404).json(err);
