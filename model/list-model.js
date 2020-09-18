@@ -17,7 +17,8 @@ const findLists = async filter => {
 };
 
 const findOneList = async id => {
-	const doc = await listDB.findOne({ _id: id }, {});
+	const doc = await listDB.findById(id);
+	console.log(doc)
 	return doc;
 };
 
@@ -31,7 +32,7 @@ const insertList = async (title, userId) => {
 };
 
 const updateList = async (listId, title) => {
-	const doc = await listDB.update(
+	const doc = await listDB.updateOne(
 		{ _id: listId },
 		{ $set: { title, updated: new Date().toLocaleString() } },
 		{ returnUpdatedDocs: true }
@@ -40,13 +41,12 @@ const updateList = async (listId, title) => {
 };
 
 const removeList = async listId => {
-	const doc = await listDB.delete({ _id: listId });
-	const todo = await todoDB.deleteMany({ listId: listId });
+	const doc = await listDB.deleteOne({ _id: listId });
 	return doc;
 };
 
 const removeListFromUser = async userId => {
-	const doc = await listDB.delete({ userId: userId }, { multi: true });
+	const doc = await listDB.deleteOne({ userId: userId }, { multi: true });
 	return doc;
 }
 

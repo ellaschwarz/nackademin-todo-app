@@ -1,11 +1,21 @@
 const chai = require('chai');
 chai.should();
 
+const Database = require('../../db/database');
+
 const userModel = require('../../model/user-model');
 const listModel = require('../../model/list-model');
 const todoModel = require('../../model/todo-model');
 
 describe('Testing the list model', () => {
+	before(async () => {
+		await Database.connect();
+	});
+
+	after(async () => {
+		await Database.disconnect();
+	});
+
 	beforeEach('insert a test user and a test list', async function() {
 		await listModel.clearAllLists();
 		await userModel.clearAllUsers();
@@ -46,12 +56,9 @@ describe('Testing the list model', () => {
 		const numberOfLists = await listModel.countLists();
 
 		//Assert
-		newList.should.deep.equal({
-			title: newList.title,
-			userId: newList.userId,
-			created: newList.created,
-			_id: newList._id
-		});
+		newList.should.have.property('title');
+		newList.should.have.property('_id');
+		newList.should.have.property('userId');
 		newList.should.be.an('object');
 		numberOfLists.should.equal(2);
 	});
@@ -78,6 +85,8 @@ describe('Testing the list model', () => {
 	it('should update a list title', async function() {
 		//Arrange
 		let listId = this.test.listId;
+		const listToBeUpdated = await listModel.findOneList(listId);
+
 		let title = 'Updated list title';
 
 		//Act
@@ -85,8 +94,9 @@ describe('Testing the list model', () => {
 		const updatedList = await listModel.findOneList(listId);
 
 		//Assert
-		updatedList.should.have.property('title', updatedList.title);
-		updatedList.should.have.property('updated', updatedList.updated);
+		updatedList.should.have.property('title');
+		updatedList.title.should.not.equal(listToBeUpdated.title)
+		updatedList.title.should.equal(title);
 		updatedList.should.be.an('object');
 	});
 
@@ -105,15 +115,16 @@ describe('Testing the list model', () => {
 
 		//Act
 		const deleteList = await listModel.removeList(this.test.listId);
+		const deleteTodosInList = await todoModel.removeTodosFromList(this.test.listId);
 		const numberOfLists = await listModel.countLists();
 		const numberOfTodosInList = await todoModel.countTodos({
 			listId: this.test.listId
 		});
 
 		//Assert
-		deleteList.should.be.equal(1);
-		numberOfLists.should.be.equal(0);
-		todoItemsInList.should.have.lengthOf(1);
-		numberOfTodosInList.should.be.equal(0);
+		 deleteList.deletedCount.should.be.equal(1);
+		 numberOfLists.should.be.equal(0);
+		 todoItemsInList.should.have.lengthOf(1);
+		 numberOfTodosInList.should.be.equal(0);
 	});
 });

@@ -6,7 +6,7 @@ const {
 	findLists,
 } = require('../model/list-model');
 
-const {findTodoByList} = require('../model/todo-model')
+const {findTodoByList, removeTodosFromList} = require('../model/todo-model')
 
 const readLists = async (req, res) => {
 	try {
@@ -56,7 +56,7 @@ const updateTodoList = async (req, res) => {
 	const { title } = req.body;
 	try {
 		const list = await findOneList(listId);
-		if (req.user.id === list.userId || req.user.role === 'admin') {
+		if (req.user.id == list.userId || req.user.role === 'admin') {
 			const list = await updateList(listId, title);
 			return res.status(200).json(list);
 		} else {
@@ -71,8 +71,9 @@ const deleteTodoList = async (req, res) => {
 	const listId = req.params.id;
 	try {
 		const list = await findOneList(listId);
-		if (req.user.id === list.userId || req.user.role === 'admin') {
+		if (req.user.id == list.userId || req.user.role === 'admin') {
 			const list = await removeList(listId);
+			const todo = await removeTodosFromList(listId);
 			return res.status(200).json(list);
 		} else {
 			throw new Error('Not authorized to delete');

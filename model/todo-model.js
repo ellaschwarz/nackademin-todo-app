@@ -60,7 +60,7 @@ const insertTodo = async (title, done, userId, listId) => {
 };
 
 const updateTodo = async (todoId, title, done) => {
-	const doc = await todoDB.update(
+	const doc = await todoDB.updateOne(
 		{ _id: todoId },
 		{ $set: { title, done, updated: new Date().toLocaleString() } },
 		{}
@@ -69,9 +69,14 @@ const updateTodo = async (todoId, title, done) => {
 };
 
 const removeTodo = async todoId => {
-	const doc = await todoDB.remove({ _id: todoId });
+	const doc = await todoDB.removeOne({ _id: todoId });
 	return doc;
 };
+
+const removeTodosFromList = async listId => {
+	const doc = await todoDB.deleteMany({ listId: listId });
+	return doc;
+}
 
 const removeTodosFromUser = async userId => {
 	const doc = await todoDB.remove({userId: userId}, { multi: true });
@@ -79,7 +84,7 @@ const removeTodosFromUser = async userId => {
 };
 
 const clearAllTodos = async () => {
-	const doc = await todoDB.remove({}, { multi: true });
+	const doc = await todoDB.remove({});
 	return doc;
 };
 
@@ -99,5 +104,6 @@ module.exports = {
 	countTodos,
 	findAllTodos,
 	removeTodosFromUser,
-	findTodoByList
+	findTodoByList,
+	removeTodosFromList
 };
